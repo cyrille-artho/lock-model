@@ -1,7 +1,7 @@
 class PrioLock extends Lock {
   Object owner;
   int count = 0;
-  int maxPrio = 0;
+  int topPrio = Integer.MAX_VALUE; // dummy value
   int waitCount = 0;
   Thread waitingThreads[] = new Thread[Environment.N_THREADS];
 
@@ -9,13 +9,13 @@ class PrioLock extends Lock {
     Thread thisThread = Thread.currentThread();
     int prio = thisThread.getPriority();
     synchronized(this) {
-      if (prio > maxPrio) {
-	maxPrio = prio;
+      if (prio < topPrio) {
+	topPrio = prio;
       }
       waitingThreads[waitCount++] = thisThread;
     }
     synchronized(this) {
-      while (count != 0 && owner != thisThread && prio < maxPrio) {
+      while (count != 0 && owner != thisThread && prio > topPrio) {
 	// cannot obtain lock; wait for unlock
 	try {
 	  wait();
@@ -36,12 +36,12 @@ class PrioLock extends Lock {
 
   synchronized void unlock() {
     super.unlock();
-    // update maxPrio of waiting threads
-    maxPrio = 0;
+    // update topPrio of waiting threads
+    topPrio = Integer.MAX_VALUE;
     for (int i = 0; i < waitCount; i++) {
       int prio = waitingThreads[i].getPriority();
-      if (prio > maxPrio) {
-	maxPrio = prio;
+      if (prio < topPrio) {
+	topPrio = prio;
       }
     }
   }
