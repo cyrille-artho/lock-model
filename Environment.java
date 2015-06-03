@@ -5,16 +5,20 @@ class Environment {
 
   static Lock createLock() {
     // factory method to swap out lock impl. in one place
-    return new PrioLock();
+    return new /*Prio*/Lock();
   }
 
   public final static void main(String[] args) {
-    final Lock l = createLock();
+    final Lock[] locks = { createLock(), createLock() };
     for (int i = 0; i < N_THREADS; i++) {
       Thread t = new Thread() {
 	public void run() {
-	  l.lock();
-	  l.unlock();
+	  Lock l1 = locks[Verify.getInt(0, 1)];
+	  Lock l2 = locks[Verify.getInt(0, 1)];
+	  l1.lock();
+	  l2.lock();
+	  l2.unlock();
+	  l1.unlock();
 	}
       };
       t.setPriority(Verify.getInt(1, 3));
