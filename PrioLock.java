@@ -7,13 +7,11 @@ class PrioLock extends Lock {
 
   void lock() {
     Thread thisThread = Thread.currentThread();
-    int prio = thisThread.getPriority();
     synchronized(this) {
-      if (prio < topPrio) {
-	topPrio = prio;
-      }
+      updateTopPrio(thisThread);
       waitingThreads[waitCount++] = thisThread;
     }
+    int prio = thisThread.getPriority();
     synchronized(this) {
       while (count != 0 && owner != thisThread && prio > topPrio) {
 	// cannot obtain lock; wait for unlock
@@ -34,15 +32,19 @@ class PrioLock extends Lock {
     }
   }
 
+  void updateTopPrio(Thread t) { // smaller priority has precedence
+    int prio = t.getPriority();
+    if (prio < topPrio) {
+      topPrio = prio;
+    }
+  }
+
   synchronized void unlock() {
     super.unlock();
     // update topPrio of waiting threads
     topPrio = Integer.MAX_VALUE;
     for (int i = 0; i < waitCount; i++) {
-      int prio = waitingThreads[i].getPriority();
-      if (prio < topPrio) {
-	topPrio = prio;
-      }
+      updateTopPrio(waitingThreads[i]);
     }
   }
 }
