@@ -6,4 +6,4 @@ then
 	exit
 fi
 
-$JPF_HOME/bin/jpf +classpath=. +sourcepath=. Locks.jpf
+$JPF_HOME/bin/jpf +verbose Locks.jpf

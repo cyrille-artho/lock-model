@@ -11,18 +11,9 @@ class Environment {
 
   public final static void main(String[] args) {
     for (int i = 0; i < N_THREADS; i++) {
-      final int li1 = Verify.getInt(0, 1);
-      final int li2 = Verify.getInt(0, 1);
-      Thread t = new Thread() {
-	public void run() {
-	  Lock l1 = locks[li1];
-	  Lock l2 = locks[li2];
-	  l1.lock();
-	  l2.lock();
-	  l2.unlock();
-	  l1.unlock();
-	}
-      };
+      int li1 = Verify.getInt(0, 1);
+      int li2 = Verify.getInt(0, 1);
+      Thread t = new TestThread(li1, li2);
       t.setPriority(Verify.getInt(1, 3));
       System.out.println("Thread " + Integer.toString(i + 1) +
 			 " has priority " + t.getPriority() +
