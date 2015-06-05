@@ -2,6 +2,7 @@ import gov.nasa.jpf.vm.Verify;
 
 class Environment {
   public final static int N_THREADS = 3;
+  static final Lock[] locks = { createLock(), createLock() };
 
   static Lock createLock() {
     // factory method to swap out lock impl. in one place
@@ -9,12 +10,13 @@ class Environment {
   }
 
   public final static void main(String[] args) {
-    final Lock[] locks = { createLock(), createLock() };
     for (int i = 0; i < N_THREADS; i++) {
+      final int li1 = Verify.getInt(0, 1);
+      final int li2 = Verify.getInt(0, 1);
       Thread t = new Thread() {
 	public void run() {
-	  Lock l1 = locks[Verify.getInt(0, 1)];
-	  Lock l2 = locks[Verify.getInt(0, 1)];
+	  Lock l1 = locks[li1];
+	  Lock l2 = locks[li2];
 	  l1.lock();
 	  l2.lock();
 	  l2.unlock();
@@ -22,6 +24,9 @@ class Environment {
 	}
       };
       t.setPriority(Verify.getInt(1, 3));
+      System.out.println("Thread " + Integer.toString(i + 1) +
+			 " has priority " + t.getPriority() +
+			 " and uses locks " + li1 + ", " + li2 + ".");
       t.start();
     }
   }
