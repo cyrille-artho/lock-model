@@ -2,4 +2,4 @@ target=Environment
 classpath=.
 native_classpath=.
 sourcepath=.
-listener=Diagnostics
+report.console.property_violation=result,error,trace,snapshot
