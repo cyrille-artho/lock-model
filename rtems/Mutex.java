@@ -30,6 +30,8 @@ public class Mutex {
 				{
 					//1. Update priority of holder thread
 					updatePriority(thisThread.currentPriority);
+					//for solution to nested mutex problem call below
+					//updateRecPriority(thisThread.currentPriority);
 					//2. Re-enqueue holder thread with modified priority if its waiting 
 					reEnqueue();
 				}
