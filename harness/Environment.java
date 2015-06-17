@@ -7,7 +7,7 @@ import gov.nasa.jpf.vm.Verify;
 
 public class Environment {
   public final static int N_THREADS = 3;
-  static final Lock[] locks = { createLock(), createLock() };
+  static final Lock[] locks = { createLock(), createLock(), createLock() };
 
   static Lock createLock() {
     // factory method to swap out lock impl. in one place
@@ -15,14 +15,22 @@ public class Environment {
   }
 
   public final static void main(String[] args) {
-    for (int i = 0; i < N_THREADS; i++) {
-      int li1 = Verify.getInt(0, 1);
-      int li2 = Verify.getInt(0, 1);
-      Thread t = new TestThread(li1, li2);
+    int li1 = Verify.getInt(0, 1);
+    int li2 = Verify.getInt(0, 1);
+    int li3 = Verify.getInt(0, 1);
+    Thread t0 = new TestThread(new int[]{li1, li2, li3});
+    t0.setPriority(Verify.getInt(1, 3));
+    System.out.println("Thread 0 has priority " + t0.getPriority() +
+		       " and uses locks " + li1 + ", " + li2 +
+		       ", and " + li3 + ".");
+    t0.start();
+    for (int i = 1; i < N_THREADS; i++) {
+      int li = Verify.getInt(0, 1);
+      Thread t = new TestThread(new int[]{li1});
       t.setPriority(Verify.getInt(1, 3));
       System.out.println("Thread " + Integer.toString(i + 1) +
 			 " has priority " + t.getPriority() +
-			 " and uses locks " + li1 + ", " + li2 + ".");
+			 " and uses lock " + li + ".");
       t.start();
     }
   }

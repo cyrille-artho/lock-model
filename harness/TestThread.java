@@ -5,20 +5,22 @@ import base.Lock;
 import rtems.RTEMSThread;
 
 public class TestThread extends RTEMSThread {
-  int idx1, idx2;
-  Lock l1, l2;
+  int idx[]; // for simpler diagnosis later (if I get some help on JPF)
+  Lock locks[];
 
-  public TestThread(int li1, int li2) {
-    idx1 = li1; // for simpler diagnostics
-    idx2 = li2; // for simpler diagnostics
-    l1 = Environment.locks[li1];
-    l2 = Environment.locks[li2];
+  public TestThread(int lockIdx[]) {
+    idx = lockIdx;
+    for (int i = 0; i < idx.length; i++) {
+      locks[i] = Environment.locks[idx[i]];
+    }
   }
 
   public void run() {
-    l1.lock();
-    l2.lock();
-    l2.unlock();
-    l1.unlock();
+    for (int i = 0; i < idx.length; i++) {
+      locks[i].lock();
+    }
+    for (int i = 0; i < idx.length; i++) {
+      locks[i].unlock();
+    }
   }
 }
