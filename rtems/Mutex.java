@@ -17,6 +17,7 @@ public class Mutex {
 	{
 		this.nestCount = 0;
 		this.holder = null;
+		this.priorityBefore = -1;
 		PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
 	}
 	public void lock() throws InterruptedException{
@@ -118,7 +119,26 @@ public class Mutex {
 
 	public void updateRecPriority(int priority)
 	{
-
+		updatePriority(priority);
+		holder.setPriority(priority);
+		int mutexIdx = holder.getMutexIndex(this);
+		//Assertion check
+		if(mutexIdx == -1)
+		{
+			System.out.println("Mutex not found in holder's mutexOrderList");
+		}
+		else
+		{
+			int i;
+			Mutex candidate;
+			for(i=mutexIdx-1;i>=0;i--)
+			{
+				candidate = holder.mutexOrderList.get(i);
+				if(candidate.priorityBefore < priority)
+					break;
+				candidate.priorityBefore = priority;
+			}
+		}
 	}
 	
 	public void reEnqueue()

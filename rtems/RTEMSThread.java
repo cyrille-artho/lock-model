@@ -25,4 +25,8 @@ public class RTEMSThread extends Thread {
 		state = Thread.State.NEW;
 	}
 
+	public int getMutexIndex(Mutex obj){
+		return this.mutexOrderList.indexOf(obj);
+	}
+
 }
