@@ -1,14 +1,15 @@
 package rtems;
 
 import base.Lock;
+import base.Condition;
 
 public class Mutex {
 	int nestCount;
 	Object waitQueue;
 	Object holder;
 	Object orderRec; 
-	final Lock parentLock = new ReentrantLock();
-   	final Condition cv1  = lock.newCondition(); 
+	final Lock parentLock = new /*Reentrant*/Lock();
+   	final Condition cv1  = parentLock.newCondition(); 
 	public Mutex()
 	{
 		this.nestCount = 0;
@@ -17,7 +18,7 @@ public class Mutex {
 	}
 	public void lock() throws InterruptedException{
 		parentLock.lock();
-		Thread thisThread = Thread.currentThread();
+		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
 		try{
 			if((holder!=null) && (holder!=thisThread))
 			{
@@ -28,8 +29,8 @@ public class Mutex {
 					//2. Re-enqueue holder thread with modified priority if its waiting 
 					renqueue();
 				}
-				thisThread.state = Params.WAIT;
-				while(!(thisThread.state==PARAM.RUNNABLE)){
+				thisThread.state = Thread.State.WAITING;
+				while(!(thisThread.state==Thread.State.RUNNABLE)){
 					cv1.await();
 				}
 			}
@@ -39,7 +40,8 @@ public class Mutex {
 				holder = thisThread;
 				nestCount = 1;
 				orderRec.priorityBefore = thisThread.currentPriority;
-				thisThread.mutexList.prepend(this);
+				thisThread.mutexOrderList.add(0, this);
+				// FIXME: Really prepend? Use LinkedList if prepend is common
 			}
 			else
 			{

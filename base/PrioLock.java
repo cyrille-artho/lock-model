@@ -1,5 +1,7 @@
 package base;
 
+import harness.Environment; // for N_THREADS
+
 public class PrioLock extends Lock {
   Object owner;
   int count = 0;

@@ -1,4 +1,7 @@
+package harness;
+
 import base.Lock;
+
 import rtems.RTEMSThread;
 
 public class TestThread extends RTEMSThread {

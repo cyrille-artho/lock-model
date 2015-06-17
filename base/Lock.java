@@ -4,6 +4,10 @@ public class Lock {
   Object owner;
   int count = 0;
 
+  public Condition newCondition() { // stub
+    return new Condition();
+  }
+
   public synchronized void lock() {
     while (count != 0 && owner != Thread.currentThread()) {
       try {

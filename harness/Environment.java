@@ -1,9 +1,11 @@
-//import gov.nasa.jpf.jvm.Verify;
-import gov.nasa.jpf.vm.Verify;
+package harness;
 
 import base.Lock;
 
-class Environment {
+//import gov.nasa.jpf.jvm.Verify;
+import gov.nasa.jpf.vm.Verify;
+
+public class Environment {
   public final static int N_THREADS = 3;
   static final Lock[] locks = { createLock(), createLock() };
 
