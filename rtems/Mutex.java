@@ -1,3 +1,5 @@
+package rtems;
+
 public class Mutex{
 	int nestCount;
 	Object waitQueue;
@@ -63,20 +65,5 @@ public class Mutex{
 	public void renqueue()
 	{
 		//if holder thread is waiting on someother mutex reenqueue that thread with updated priority.
-	}
-}
-public class ChainControl{
-	Object next;
-	Object prev;
-	public ChainControl(){
-		this.next = null;
-		this.prev = null;
-	}
-}
-public class OrderList{
-	Object node;
-	int priorityBefore;
-	public OrderList(){
-		this.node = new ChainControl();
 	}
 }
