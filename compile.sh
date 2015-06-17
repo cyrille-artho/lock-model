@@ -6,4 +6,4 @@ then
 	exit
 fi
 
-javac -classpath ${JPF_HOME}/build/jpf.jar:. *.java */*.java
+javac -Xlint -classpath ${JPF_HOME}/build/jpf.jar:. *.java */*.java
