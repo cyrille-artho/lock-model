@@ -11,6 +11,7 @@ import gov.nasa.jpf.vm.VM;
 
 public class Diagnostics extends SearchListenerAdapter {
   public void propertyViolated(Search search) {
+/*
     VM vm = search.getVM();
     ThreadInfo[] threads = vm.getLiveThreads();
 //    ElementInfo[] eiCandidates = new ElementInfo[threads.length];
@@ -34,5 +35,6 @@ public class Diagnostics extends SearchListenerAdapter {
 //	}
       }
     }
+*/
   }
 }
