@@ -1,4 +1,5 @@
-import gov.nasa.jpf.jvm.Verify;
+//import gov.nasa.jpf.jvm.Verify;
+import gov.nasa.jpf.vm.Verify;
 
 class Environment {
   public final static int N_THREADS = 3;

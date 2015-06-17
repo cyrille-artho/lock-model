@@ -9,7 +9,7 @@ public class Mutex{
 	{
 		this.nestCount = 0;
 		this.holder = null;
-		this.orderRec = new OrderList()
+		this.orderRec = new OrderList();
 	}
 	public void lock() throws InterruptedException{
 		parentLock.lock();
@@ -35,7 +35,7 @@ public class Mutex{
 				holder = thisThread;
 				nestCount = 1;
 				orderRec.priorityBefore = thisThread.currentPriority;
-				thisThread.mutexList.prepend(this)
+				thisThread.mutexList.prepend(this);
 			}
 			else
 			{
@@ -70,13 +70,13 @@ public class ChainControl{
 	Object prev;
 	public ChainControl(){
 		this.next = null;
-		this prev = null;
+		this.prev = null;
 	}
 }
 public class OrderList{
 	Object node;
 	int priorityBefore;
 	public OrderList(){
-		this.node = new ChainControl()
+		this.node = new ChainControl();
 	}
 }
