@@ -1,6 +1,8 @@
 //import gov.nasa.jpf.jvm.Verify;
 import gov.nasa.jpf.vm.Verify;
 
+import base.Lock;
+
 class Environment {
   public final static int N_THREADS = 3;
   static final Lock[] locks = { createLock(), createLock() };

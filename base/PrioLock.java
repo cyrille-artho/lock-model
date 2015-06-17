@@ -1,11 +1,13 @@
-class PrioLock extends Lock {
+package base;
+
+public class PrioLock extends Lock {
   Object owner;
   int count = 0;
   int topPrio = Integer.MAX_VALUE; // dummy value
   int waitCount = 0;
   Thread waitingThreads[] = new Thread[Environment.N_THREADS];
 
-  void lock() {
+  public void lock() {
     Thread thisThread = Thread.currentThread();
     synchronized(this) {
       updateTopPrio(thisThread);
@@ -39,7 +41,7 @@ class PrioLock extends Lock {
     }
   }
 
-  synchronized void unlock() {
+  public synchronized void unlock() {
     super.unlock();
     // update topPrio of waiting threads
     topPrio = Integer.MAX_VALUE;

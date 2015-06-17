@@ -1,8 +1,10 @@
-class Lock {
+package base;
+
+public class Lock {
   Object owner;
   int count = 0;
 
-  synchronized void lock() {
+  public synchronized void lock() {
     while (count != 0 && owner != Thread.currentThread()) {
       try {
 	wait();
@@ -13,7 +15,7 @@ class Lock {
     count++;
   }
 
-  synchronized void unlock() {
+  public synchronized void unlock() {
     if (--count == 0) {
       owner = null;
       notifyAll();

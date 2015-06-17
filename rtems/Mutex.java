@@ -1,6 +1,8 @@
 package rtems;
 
-public class Mutex{
+import base.Lock;
+
+public class Mutex {
 	int nestCount;
 	Object waitQueue;
 	Object holder;
@@ -15,7 +17,7 @@ public class Mutex{
 	}
 	public void lock() throws InterruptedException{
 		parentLock.lock();
-		thisThread = Thread.currentThread();
+		Thread thisThread = Thread.currentThread();
 		try{
 			if((holder!=null) && (holder!=thisThread))
 			{

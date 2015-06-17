@@ -1,3 +1,6 @@
+import base.Lock;
+import rtems.RTEMSThread;
+
 public class TestThread extends RTEMSThread {
   int idx1, idx2;
   Lock l1, l2;
