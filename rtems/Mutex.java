@@ -4,7 +4,7 @@ import base.Condition;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class Mutex {
+public class Mutex extends Lock {
 	int nestCount;
 	PriorityQueue<RTEMSThread> waitQueue;
 	RTEMSThread holder;
@@ -20,10 +20,8 @@ public class Mutex {
 		this.priorityBefore = -1;
 		PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
 	}
-	public void lock() throws InterruptedException{
-		parentLock.lock();
+	public synchronized void lock() {
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
-		try{
 			if((holder!=null) && (holder!=thisThread))
 			{
 				if(priorityRaiseFilter(thisThread.currentPriority))
@@ -40,7 +38,10 @@ public class Mutex {
 				while(thisThread.state !=Thread.State.RUNNABLE){
 					this.waitQueue.offer(thisThread);
 					thisThread.wait = waitQueue;
-					cv1.wait();
+					try{
+						wait();
+					} catch (InterruptedException e) {
+					}
 				}
 			}
 			//if code reaches here it means it has the potential to acquire the mutex
@@ -58,23 +59,18 @@ public class Mutex {
 				nestCount++;
 				//how should we prepend here???Doubt the orderRec as it is already present in thisThread.mutexList
 			}
-		  }finally{
-			parentLock.unlock();
-		  }
-
 	}
-	public void unlock() throws InterruptedException{
+
+	public synchronized void unlock() {
 		Mutex topMutex=null;
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
 		RTEMSThread candidateThr;
 		int stepdownPri;
-		parentLock.lock();
 		//proper step down of priority.
 		//remove eligible candidate thread from this.waitQueue
 		//set the state of that thread to Params.RUNNABLE
 		//signalAll()
 		//unlockparentLock.lock()
-		try{
 			//1.Assertion Check
 			topMutex = thisThread.mutexOrderList.get(0);
 			if(topMutex!=this){
@@ -98,12 +94,8 @@ public class Mutex {
 			if(candidateThr != null){
 				candidateThr.state = Thread.State.RUNNABLE;
 				//Logically only candidate will go through lock and rest will again get queued up
-				cv1.notifyAll();
+				notifyAll();
 			}
-
-		}finally{
-			parentLock.unlock();
-		}
 	}
 
 	public boolean priorityRaiseFilter(int priority){

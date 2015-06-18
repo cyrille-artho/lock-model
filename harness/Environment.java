@@ -1,6 +1,7 @@
 package harness;
 
 import base.Lock;
+import rtems.Mutex;
 
 //import gov.nasa.jpf.jvm.Verify;
 import gov.nasa.jpf.vm.Verify;
@@ -11,7 +12,7 @@ public class Environment {
 
   static Lock createLock() {
     // factory method to swap out lock impl. in one place
-    return new /*Prio*/Lock();
+    return new /*Prio*/Mutex();
   }
 
   public final static void main(String[] args) {
