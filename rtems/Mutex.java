@@ -5,21 +5,15 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class Mutex extends Lock {
-	int nestCount;
-	PriorityQueue<RTEMSThread> waitQueue;
+	int nestCount = 0;
 	RTEMSThread holder;
 	//Object orderRec;
-	int priorityBefore; 
+	int priorityBefore = -1; 
 	final Lock parentLock = new /*Reentrant*/Lock();
 	final Condition cv1  = parentLock.newCondition(); 
 	MyComparator comparator = new MyComparator();
-	public Mutex()
-	{
-		this.nestCount = 0;
-		this.holder = null;
-		this.priorityBefore = -1;
-		PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
-	}
+	PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
+
 	public synchronized void lock() {
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
 			if((holder!=null) && (holder!=thisThread))
