@@ -15,9 +15,9 @@ public class Environment {
   }
 
   public final static void main(String[] args) {
-    int li1 = Verify.getInt(0, 1);
-    int li2 = Verify.getInt(0, 1);
-    int li3 = Verify.getInt(0, 1);
+    int li1 = Verify.getInt(0, locks.length - 1);
+    int li2 = Verify.getInt(0, locks.length - 1);
+    int li3 = Verify.getInt(0, locks.length - 1);
     Thread t0 = new TestThread(new int[]{li1, li2, li3});
     t0.setPriority(Verify.getInt(1, 3));
     System.out.println("Thread 0 has priority " + t0.getPriority() +
@@ -25,7 +25,7 @@ public class Environment {
 		       ", and " + li3 + ".");
     t0.start();
     for (int i = 1; i < N_THREADS; i++) {
-      int li = Verify.getInt(0, 1);
+      int li = Verify.getInt(0, locks.length - 1);
       Thread t = new TestThread(new int[]{li1});
       t.setPriority(Verify.getInt(1, 3));
       System.out.println("Thread " + Integer.toString(i + 1) +
