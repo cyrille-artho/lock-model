@@ -10,7 +10,6 @@ public class Mutex extends Lock {
 	//Object orderRec;
 	int priorityBefore = -1; 
 	final Lock parentLock = new /*Reentrant*/Lock();
-	final Condition cv1  = parentLock.newCondition(); 
 	MyComparator comparator = new MyComparator();
 	PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
 
