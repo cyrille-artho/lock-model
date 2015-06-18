@@ -1,4 +1,4 @@
-target=Environment
+target=harness.Environment
 classpath=.
 native_classpath=.
 sourcepath=.
