@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class RTEMSThread extends Thread {
   // TODO: add extra priority field etc.
-	PriorityQueue<Object> wait;
+	PriorityQueue<RTEMSThread> wait;
 	int resourceCount;
 	Thread.State state;
 	//Object lockMutex; mutexOrderList will suffice

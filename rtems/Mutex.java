@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 
 public class Mutex {
 	int nestCount;
-	PriorityQueue<Object> waitQueue;
+	PriorityQueue<RTEMSThread> waitQueue;
 	RTEMSThread holder;
 	//Object orderRec;
 	int priorityBefore; 
@@ -32,11 +32,12 @@ public class Mutex {
 					updatePriority(thisThread.currentPriority);
 					//for solution to nested mutex problem call below
 					//updateRecPriority(thisThread.currentPriority);
-					//2. Re-enqueue holder thread with modified priority if its waiting 
-					reEnqueue();
+					//2. Re-enqueue holder thread with modified priority if its waiting
+					if(holder.wait!=null) 
+						reEnqueue();
 				}
 				thisThread.state = Thread.State.WAITING;
-				while(!(thisThread.state==Thread.State.RUNNABLE)){
+				while(thisThread.state !=Thread.State.RUNNABLE){
 					this.waitQueue.offer(thisThread);
 					thisThread.wait = waitQueue;
 					cv1.wait();
@@ -63,7 +64,7 @@ public class Mutex {
 
 	}
 	public void unlock() throws InterruptedException{
-		Object topMutex=null;
+		Mutex topMutex=null;
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
 		RTEMSThread candidateThr;
 		int stepdownPri;
@@ -87,13 +88,13 @@ public class Mutex {
 			//3. Initialize the mutex orderList
 			//this.orderRec.node.init();
 			//4. stepdown of priority for this thread
-			stepdownPri = this.priorityBefore;
 
-			thisThread.setPriority(stepdownPri);
+			thisThread.setPriority(this.priorityBefore);
 			//5. Re-enqueue if thread is waiting
-			reEnqueue();
+			if(holder.wait!=null)
+				reEnqueue();
 			holder = null;
-			candidateThr = (RTEMSThread)waitQueue.poll();
+			candidateThr = waitQueue.poll();
 			if(candidateThr != null){
 				candidateThr.state = Thread.State.RUNNABLE;
 				//Logically only candidate will go through lock and rest will again get queued up
@@ -107,10 +108,7 @@ public class Mutex {
 
 	public boolean priorityRaiseFilter(int priority){
 		int holderPriority = holder.getPriority();
-		if(priority < holderPriority){
-			return true;
-		}
-		return false;
+		return (priority < holderPriority);
 	}
 
 	public void updatePriority(int priority)
@@ -146,13 +144,10 @@ public class Mutex {
 	public void reEnqueue()
 	{
 		//if holder thread is waiting on someother mutex reenqueue that thread with updated priority.
-		PriorityQueue<Object> pqueue;
-		if(holder.wait!=null)
-		{
-			pqueue = holder.wait;
-			pqueue.remove(holder);
-			pqueue.offer(holder);
-		}
+		PriorityQueue<RTEMSThread> pqueue;
+		pqueue = holder.wait;
+		pqueue.remove(holder);
+		pqueue.offer(holder);
 	}
 }
 
