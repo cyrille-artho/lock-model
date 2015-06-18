@@ -26,7 +26,7 @@ public class Environment {
     t0.start();
     for (int i = 1; i < N_THREADS; i++) {
       int li = Verify.getInt(0, locks.length - 1);
-      Thread t = new TestThread(new int[]{li1});
+      Thread t = new TestThread(new int[]{li});
       t.setPriority(Verify.getInt(1, 3));
       System.out.println("Thread " + Integer.toString(i + 1) +
 			 " has priority " + t.getPriority() +
