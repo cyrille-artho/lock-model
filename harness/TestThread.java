@@ -10,6 +10,7 @@ public class TestThread extends RTEMSThread {
 
   public TestThread(int lockIdx[]) {
     idx = lockIdx;
+    locks = new Lock[idx.length];
     for (int i = 0; i < idx.length; i++) {
       locks[i] = Environment.locks[idx[i]];
     }
