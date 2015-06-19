@@ -38,10 +38,10 @@ public class Mutex extends Lock {
 				}
 			}
 			//if code reaches here it means it has the potential to acquire the mutex
-			if(holder==null)
+			if(holder == null)
 			{
 				holder = thisThread;
-				nestCount = 1;
+				this.nestCount = 1;
 				this.priorityBefore = thisThread.currentPriority;
 				thisThread.mutexOrderList.add(0, this);
 				// FIXME: Really prepend? Use LinkedList if prepend is common
@@ -49,9 +49,11 @@ public class Mutex extends Lock {
 			}
 			else
 			{
-				nestCount++;
+				assert nestCount>0;
+				this.nestCount++;
 				//how should we prepend here???Doubt the orderRec as it is already present in thisThread.mutexList
 			}
+			thisThread.resourceCount++;
 	}
 
 	public synchronized void unlock() {
@@ -64,20 +66,21 @@ public class Mutex extends Lock {
 		//set the state of that thread to Params.RUNNABLE
 		//signalAll()
 		//unlockparentLock.lock()
-			//1.Assertion Check
+			//1.Assertion Check on this mutex.nestCount!=0
+		assert nestCount>0;
+		assert thisThread.resourceCount>0;
+		this.nestCount--;
+		if(this.nestCount==0)
+		{
 			topMutex = thisThread.mutexOrderList.get(0);
-			if(topMutex!=this){
+			//Assertion on nestCount!=0
+			/*if(topMutex!=this){
 				//assertion error for strict order mutexes
-			}
-			//Not handling the nesting case right now.
-			//2. Remove top element from mutexOrderList
-			//mutexOrderList is acting as chaincontrol structure for us.
-			//Right now avoiding complications
+			}*/
+			//System.out.println(topMutex);
+			assert this==topMutex;
+			
 			topMutex = thisThread.mutexOrderList.remove(0);
-			//3. Initialize the mutex orderList
-			//this.orderRec.node.init();
-			//4. stepdown of priority for this thread
-
 			thisThread.setPriority(this.priorityBefore);
 			//5. Re-enqueue if thread is waiting
 			if(holder.wait!=null)
@@ -89,6 +92,10 @@ public class Mutex extends Lock {
 				//Logically only candidate will go through lock and rest will again get queued up
 				notifyAll();
 			}
+		}
+		thisThread.resourceCount--;
+
+			
 	}
 
 	public boolean priorityRaiseFilter(int priority){
