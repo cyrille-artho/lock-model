@@ -18,6 +18,7 @@ public class Mutex extends Lock {
 			while((holder!=null) && (holder!=thisThread))
 			{
 				try{
+					thisThread.state = Thread.State.WAITING;
 					if(priorityRaiseFilter(thisThread.currentPriority))
 					{
 						updatePriority(thisThread.currentPriority);
@@ -71,6 +72,7 @@ public class Mutex extends Lock {
 			//	reEnqueue();
 			holder = waitQueue.poll();			
 			if(holder != null){
+				assert holder.state==Thread.State.WAITING;
 				holder.state = Thread.State.RUNNABLE;
 				holder.wait=null;
 				notifyAll();
