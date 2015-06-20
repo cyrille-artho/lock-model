@@ -24,7 +24,6 @@ public class Mutex extends Lock {
 						if(holder.wait!=null) 
 							reEnqueue();
 					}
-					thisThread.state = Thread.State.WAITING;
 					if(this.waitQueue.contains(thisThread)==false){
 						this.waitQueue.offer(thisThread);
 					}
@@ -36,7 +35,7 @@ public class Mutex extends Lock {
 				
 			}
 			//if code reaches here it means it has the potential to acquire the mutex
-			assert thisThread.state != Thread.State.WAITING;
+			assert thisThread.getState() != Thread.State.WAITING;
 			if(holder==null)
 			{
 				holder = thisThread;
@@ -67,8 +66,9 @@ public class Mutex extends Lock {
 			topMutex = thisThread.mutexOrderList.remove(0);
 			thisThread.setPriority(this.priorityBefore);
 			assert holder!=null;
-			if(holder.wait!=null)
-				reEnqueue();
+			assert holder.wait==null;
+			//if(holder.wait!=null)
+			//	reEnqueue();
 			holder = waitQueue.poll();			
 			if(holder != null){
 				holder.state = Thread.State.RUNNABLE;
