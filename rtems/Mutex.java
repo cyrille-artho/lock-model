@@ -4,26 +4,17 @@ import base.Condition;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class Mutex {
-	int nestCount;
-	PriorityQueue<Object> waitQueue;
+public class Mutex extends Lock {
+	int nestCount = 0;
 	RTEMSThread holder;
 	//Object orderRec;
-	int priorityBefore; 
+	int priorityBefore = -1; 
 	final Lock parentLock = new /*Reentrant*/Lock();
-	final Condition cv1  = parentLock.newCondition(); 
 	MyComparator comparator = new MyComparator();
-	public Mutex()
-	{
-		this.nestCount = 0;
-		this.holder = null;
-		this.priorityBefore = -1;
-		PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
-	}
-	public void lock() throws InterruptedException{
-		parentLock.lock();
+	PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
+
+	public synchronized void lock() {
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
-		try{
 			if((holder!=null) && (holder!=thisThread))
 			{
 				if(priorityRaiseFilter(thisThread.currentPriority))
@@ -32,21 +23,25 @@ public class Mutex {
 					updatePriority(thisThread.currentPriority);
 					//for solution to nested mutex problem call below
 					//updateRecPriority(thisThread.currentPriority);
-					//2. Re-enqueue holder thread with modified priority if its waiting 
-					reEnqueue();
+					//2. Re-enqueue holder thread with modified priority if its waiting
+					if(holder.wait!=null) 
+						reEnqueue();
 				}
 				thisThread.state = Thread.State.WAITING;
-				while(!(thisThread.state==Thread.State.RUNNABLE)){
+				while(thisThread.state !=Thread.State.RUNNABLE){
 					this.waitQueue.offer(thisThread);
 					thisThread.wait = waitQueue;
-					cv1.wait();
+					try{
+						wait();
+					} catch (InterruptedException e) {
+					}
 				}
 			}
 			//if code reaches here it means it has the potential to acquire the mutex
-			if(holder==null)
+			if(holder == null)
 			{
 				holder = thisThread;
-				nestCount = 1;
+				this.nestCount = 1;
 				this.priorityBefore = thisThread.currentPriority;
 				thisThread.mutexOrderList.add(0, this);
 				// FIXME: Really prepend? Use LinkedList if prepend is common
@@ -54,63 +49,58 @@ public class Mutex {
 			}
 			else
 			{
-				nestCount++;
+				assert nestCount>0;
+				this.nestCount++;
 				//how should we prepend here???Doubt the orderRec as it is already present in thisThread.mutexList
 			}
-		  }finally{
-			parentLock.unlock();
-		  }
-
+			thisThread.resourceCount++;
 	}
-	public void unlock() throws InterruptedException{
-		Object topMutex=null;
+
+	public synchronized void unlock() {
+		Mutex topMutex=null;
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
 		RTEMSThread candidateThr;
 		int stepdownPri;
-		parentLock.lock();
 		//proper step down of priority.
 		//remove eligible candidate thread from this.waitQueue
 		//set the state of that thread to Params.RUNNABLE
 		//signalAll()
 		//unlockparentLock.lock()
-		try{
-			//1.Assertion Check
+			//1.Assertion Check on this mutex.nestCount!=0
+		assert nestCount>0;
+		assert thisThread.resourceCount>0;
+		this.nestCount--;
+		if(this.nestCount==0)
+		{
 			topMutex = thisThread.mutexOrderList.get(0);
-			if(topMutex!=this){
+			//Assertion on nestCount!=0
+			/*if(topMutex!=this){
 				//assertion error for strict order mutexes
-			}
-			//Not handling the nesting case right now.
-			//2. Remove top element from mutexOrderList
-			//mutexOrderList is acting as chaincontrol structure for us.
-			//Right now avoiding complications
+			}*/
+			//System.out.println(topMutex);
+			assert this==topMutex;
+			
 			topMutex = thisThread.mutexOrderList.remove(0);
-			//3. Initialize the mutex orderList
-			//this.orderRec.node.init();
-			//4. stepdown of priority for this thread
-			stepdownPri = this.priorityBefore;
-
-			thisThread.setPriority(stepdownPri);
+			thisThread.setPriority(this.priorityBefore);
 			//5. Re-enqueue if thread is waiting
-			reEnqueue();
+			if(holder.wait!=null)
+				reEnqueue();
 			holder = null;
-			candidateThr = (RTEMSThread)waitQueue.poll();
+			candidateThr = waitQueue.poll();
 			if(candidateThr != null){
 				candidateThr.state = Thread.State.RUNNABLE;
 				//Logically only candidate will go through lock and rest will again get queued up
-				cv1.notifyAll();
+				notifyAll();
 			}
-
-		}finally{
-			parentLock.unlock();
 		}
+		thisThread.resourceCount--;
+
+			
 	}
 
 	public boolean priorityRaiseFilter(int priority){
 		int holderPriority = holder.getPriority();
-		if(priority < holderPriority){
-			return true;
-		}
-		return false;
+		return (priority < holderPriority);
 	}
 
 	public void updatePriority(int priority)
@@ -146,13 +136,10 @@ public class Mutex {
 	public void reEnqueue()
 	{
 		//if holder thread is waiting on someother mutex reenqueue that thread with updated priority.
-		PriorityQueue<Object> pqueue;
-		if(holder.wait!=null)
-		{
-			pqueue = holder.wait;
-			pqueue.remove(holder);
-			pqueue.offer(holder);
-		}
+		PriorityQueue<RTEMSThread> pqueue;
+		pqueue = holder.wait;
+		pqueue.remove(holder);
+		pqueue.offer(holder);
 	}
 }
 
