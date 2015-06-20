@@ -9,6 +9,7 @@ public class Mutex extends Lock {
 	RTEMSThread holder;
 	//Object orderRec;
 	int priorityBefore = -1; 
+	int pushMutex=1;
 	final Lock parentLock = new /*Reentrant*/Lock();
 	MyComparator comparator = new MyComparator();
 	PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
@@ -28,9 +29,9 @@ public class Mutex extends Lock {
 						reEnqueue();
 				}
 				thisThread.state = Thread.State.WAITING;
+				this.waitQueue.offer(thisThread);
+				thisThread.wait = waitQueue;
 				while(thisThread.state !=Thread.State.RUNNABLE){
-					this.waitQueue.offer(thisThread);
-					thisThread.wait = waitQueue;
 					try{
 						wait();
 					} catch (InterruptedException e) {
@@ -38,14 +39,14 @@ public class Mutex extends Lock {
 				}
 			}
 			//if code reaches here it means it has the potential to acquire the mutex
-			if(holder == null)
+			if(pushMutex==1)
 			{
-				holder = thisThread;
 				this.nestCount = 1;
 				this.priorityBefore = thisThread.currentPriority;
 				thisThread.mutexOrderList.add(0, this);
 				// FIXME: Really prepend? Use LinkedList if prepend is common
 				//Also have to chain it to threads lockMutex chain
+				pushMutex = 0;
 			}
 			else
 			{
@@ -89,9 +90,10 @@ public class Mutex extends Lock {
 			candidateThr = waitQueue.poll();
 			if(candidateThr != null){
 				candidateThr.state = Thread.State.RUNNABLE;
-				//Logically only candidate will go through lock and rest will again get queued up
+				holder = candidateThr;
 				notifyAll();
 			}
+			pushMutex = 1;
 		}
 		thisThread.resourceCount--;
 

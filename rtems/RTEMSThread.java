@@ -7,7 +7,6 @@ public class RTEMSThread extends Thread {
 	PriorityQueue<RTEMSThread> wait;
 	int resourceCount;
 	Thread.State state;
-	//Object lockMutex; mutexOrderList will suffice
 	int currentPriority;
 	int realPriority;
 	ArrayList<Mutex> mutexOrderList;  //it is a linkedList which stores acquired mutex objects in LIFO order.  
@@ -15,8 +14,6 @@ public class RTEMSThread extends Thread {
 		this();
 		this.currentPriority = this.realPriority = priority;
 		this.state = state;
-		//this.lockMutex = new ChainControl();
-		PriorityQueue<RTEMSThread> wait = null;
 	}
 
 	public RTEMSThread() {
