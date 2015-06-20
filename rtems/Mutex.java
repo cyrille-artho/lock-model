@@ -9,51 +9,45 @@ public class Mutex extends Lock {
 	RTEMSThread holder;
 	//Object orderRec;
 	int priorityBefore = -1; 
-	int pushMutex=1;
 	final Lock parentLock = new /*Reentrant*/Lock();
 	MyComparator comparator = new MyComparator();
 	PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
 
 	public synchronized void lock() {
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
-			if((holder!=null) && (holder!=thisThread))
+			while((holder!=null) && (holder!=thisThread))
 			{
-				if(priorityRaiseFilter(thisThread.currentPriority))
-				{
-					//1. Update priority of holder thread
-					updatePriority(thisThread.currentPriority);
-					//for solution to nested mutex problem call below
-					//updateRecPriority(thisThread.currentPriority);
-					//2. Re-enqueue holder thread with modified priority if its waiting
-					if(holder.wait!=null) 
-						reEnqueue();
-				}
-				thisThread.state = Thread.State.WAITING;
-				this.waitQueue.offer(thisThread);
-				thisThread.wait = waitQueue;
-				while(thisThread.state !=Thread.State.RUNNABLE){
-					try{
-						wait();
-					} catch (InterruptedException e) {
+				try{
+					if(priorityRaiseFilter(thisThread.currentPriority))
+					{
+						updatePriority(thisThread.currentPriority);
+						if(holder.wait!=null) 
+							reEnqueue();
 					}
-				}
+					thisThread.state = Thread.State.WAITING;
+					if(this.waitQueue.contains(thisThread)==false){
+						this.waitQueue.offer(thisThread);
+					}
+					thisThread.wait = waitQueue;
+					wait();
+							
+					}catch (InterruptedException e) 
+					{}
+				
 			}
 			//if code reaches here it means it has the potential to acquire the mutex
-			if(pushMutex==1)
+			assert thisThread.state != Thread.State.WAITING;
+			if(holder==null)
 			{
-				this.nestCount = 1;
+				holder = thisThread;
+				assert nestCount==0;
+			}
+			if(this.nestCount==0)
+			{
 				this.priorityBefore = thisThread.currentPriority;
 				thisThread.mutexOrderList.add(0, this);
-				// FIXME: Really prepend? Use LinkedList if prepend is common
-				//Also have to chain it to threads lockMutex chain
-				pushMutex = 0;
 			}
-			else
-			{
-				assert nestCount>0;
-				this.nestCount++;
-				//how should we prepend here???Doubt the orderRec as it is already present in thisThread.mutexList
-			}
+			this.nestCount++;
 			thisThread.resourceCount++;
 	}
 
@@ -62,42 +56,26 @@ public class Mutex extends Lock {
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
 		RTEMSThread candidateThr;
 		int stepdownPri;
-		//proper step down of priority.
-		//remove eligible candidate thread from this.waitQueue
-		//set the state of that thread to Params.RUNNABLE
-		//signalAll()
-		//unlockparentLock.lock()
-			//1.Assertion Check on this mutex.nestCount!=0
 		assert nestCount>0;
 		assert thisThread.resourceCount>0;
 		this.nestCount--;
+		thisThread.resourceCount--;
 		if(this.nestCount==0)
 		{
 			topMutex = thisThread.mutexOrderList.get(0);
-			//Assertion on nestCount!=0
-			/*if(topMutex!=this){
-				//assertion error for strict order mutexes
-			}*/
-			//System.out.println(topMutex);
-			assert this==topMutex;
-			
+			assert this==topMutex;		
 			topMutex = thisThread.mutexOrderList.remove(0);
 			thisThread.setPriority(this.priorityBefore);
-			//5. Re-enqueue if thread is waiting
+			assert holder!=null;
 			if(holder.wait!=null)
 				reEnqueue();
-			holder = null;
-			candidateThr = waitQueue.poll();
-			if(candidateThr != null){
-				candidateThr.state = Thread.State.RUNNABLE;
-				holder = candidateThr;
+			holder = waitQueue.poll();			
+			if(holder != null){
+				holder.state = Thread.State.RUNNABLE;
+				holder.wait=null;
 				notifyAll();
 			}
-			pushMutex = 1;
-		}
-		thisThread.resourceCount--;
-
-			
+		}			
 	}
 
 	public boolean priorityRaiseFilter(int priority){

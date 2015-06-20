@@ -7,7 +7,7 @@ import rtems.Mutex;
 import gov.nasa.jpf.vm.Verify;
 
 public class Environment {
-  public final static int N_THREADS = 3;
+  public final static int N_THREADS = 2;
   static final Lock[] locks = { createLock(), createLock(), createLock() };
 
   static Lock createLock() {
