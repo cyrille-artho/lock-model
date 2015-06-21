@@ -8,7 +8,7 @@ import gov.nasa.jpf.vm.Verify;
 
 public class Environment {
   public final static int N_THREADS = 3;
-  static final Lock[] locks = { createLock(), createLock(), createLock() };
+  static final Lock[] locks = { /* createLock(), */ createLock(), createLock() };
 
   static Lock createLock() {
     // factory method to swap out lock impl. in one place
