@@ -3,16 +3,21 @@ import base.Lock;
 import base.Condition;
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import java.util.Iterator;
 
 public class Mutex extends Lock {
-	int nestCount = 0;
 	RTEMSThread holder;
-	//Object orderRec;
-	int priorityBefore = -1; 
-	final Lock parentLock = new /*Reentrant*/Lock();
+	int id;
+	int nestCount;
+	int priorityBefore=-1;
 	MyComparator comparator = new MyComparator();
 	PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
-
+	public Mutex(int idx){
+		this.id = idx;
+		this.nestCount = 0;
+		this.priorityBefore = -1;
+	}
+	 
 	public synchronized void lock() {
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
 			while((holder!=null) && (holder!=thisThread))
@@ -29,6 +34,7 @@ public class Mutex extends Lock {
 						this.waitQueue.offer(thisThread);
 					}
 					thisThread.wait = waitQueue;
+					validator(1);
 					wait();
 							
 					}catch (InterruptedException e) 
@@ -66,6 +72,9 @@ public class Mutex extends Lock {
 			assert this==topMutex;		
 			topMutex = thisThread.mutexOrderList.remove(0);
 			thisThread.setPriority(this.priorityBefore);
+			System.out.println("Holder Thread: "+thisThread.getId()+ " priority: " + thisThread.getPriority());
+			System.out.println("Released Mutex: "+topMutex.id);
+			validator(2);
 			assert holder!=null;
 			assert holder.wait==null;
 			//if(holder.wait!=null)
@@ -78,6 +87,32 @@ public class Mutex extends Lock {
 				notifyAll();
 			}
 		}			
+	}
+
+	public void validator(int from){
+		RTEMSThread chkThr;
+		Mutex chkMtx;
+		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+		if(from==1){
+			System.out.println("Validator called from lock");
+		}
+		else{
+			System.out.println("validator called from unlock");
+		}
+
+		Iterator<Mutex> mItr = thisThread.mutexOrderList.iterator();
+		while (mItr.hasNext()){
+			chkMtx = mItr.next();
+			System.out.println("--->Mutex: "+chkMtx.id);
+			chkThr = chkMtx.waitQueue.peek();
+			if(chkThr!=null)
+			{
+				System.out.println("------>Thread-id: "+ chkThr.getId()+" priority: "+ chkThr.getPriority());
+				assert (thisThread.getPriority()<=chkThr.getPriority());	
+			}
+			
+		}
+
 	}
 
 	public boolean priorityRaiseFilter(int priority){

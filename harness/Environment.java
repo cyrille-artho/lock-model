@@ -7,12 +7,12 @@ import rtems.Mutex;
 import gov.nasa.jpf.vm.Verify;
 
 public class Environment {
-  public final static int N_THREADS = 3;
-  static final Lock[] locks = { createLock(), createLock(), createLock() };
+  public final static int N_THREADS = 2;
+  static final Lock[] locks = { createLock(1), createLock(2), createLock(3) };
 
-  static Lock createLock() {
+  static Lock createLock(int id) {
     // factory method to swap out lock impl. in one place
-    return new /*Prio*/Mutex();
+    return new /*Prio*/Mutex(id);
   }
 
   public final static void main(String[] args) {
@@ -32,7 +32,9 @@ public class Environment {
       System.out.println("Thread " + Integer.toString(i + 1) +
 			 " has priority " + t.getPriority() +
 			 " and uses lock " + li + ".");
+
       t.start();
     }
+    System.exit(1);
   }
 }
