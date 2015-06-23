@@ -19,10 +19,10 @@ public class Mutex extends Lock {
 	}
 	 
 	public synchronized void lock() {
-		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
-		assert (thisThread.currentPriority == thisThread.getPriority());	
+		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();	
 			while((holder!=null) && (holder!=thisThread))
 			{
+				assert (thisThread.currentPriority == thisThread.getPriority());
 				try{
 					thisThread.state = Thread.State.WAITING;
 					if(priorityRaiseFilter(thisThread.currentPriority))
