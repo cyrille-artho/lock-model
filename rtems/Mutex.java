@@ -20,6 +20,7 @@ public class Mutex extends Lock {
 	 
 	public synchronized void lock() {
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+		assert (thisThread.currentPriority == thisThread.getPriority());	
 			while((holder!=null) && (holder!=thisThread))
 			{
 				try{
@@ -72,6 +73,7 @@ public class Mutex extends Lock {
 			assert this==topMutex;		
 			topMutex = thisThread.mutexOrderList.remove(0);
 			thisThread.setPriority(this.priorityBefore);
+			thisThread.currentPriority = this.priorityBefore;
 			System.out.println("Holder Thread: "+thisThread.getId()+ " priority: " + thisThread.getPriority());
 			System.out.println("Released Mutex: "+topMutex.id);
 			validator(2);
@@ -128,26 +130,20 @@ public class Mutex extends Lock {
 
 	public void updateRecPriority(int priority)
 	{
-		updatePriority(priority);
-		holder.setPriority(priority);
 		int mutexIdx = holder.getMutexIndex(this);
+		int i;
+		Mutex candidate;
 		//Assertion check
-		if(mutexIdx == -1)
+		assert mutexIdx!=-1;
+		updatePriority(priority);	
+		for(i=mutexIdx-1;i>=0;i--)
 		{
-			System.out.println("Mutex not found in holder's mutexOrderList");
+			candidate = holder.mutexOrderList.get(i);
+			if(candidate.priorityBefore < priority)
+				break;
+			candidate.priorityBefore = priority;
 		}
-		else
-		{
-			int i;
-			Mutex candidate;
-			for(i=mutexIdx-1;i>=0;i--)
-			{
-				candidate = holder.mutexOrderList.get(i);
-				if(candidate.priorityBefore < priority)
-					break;
-				candidate.priorityBefore = priority;
-			}
-		}
+	
 	}
 	
 	public void reEnqueue()
@@ -168,4 +164,3 @@ class MyComparator implements Comparator<RTEMSThread>
 		return t1.getPriority() - t2.getPriority();
 	}
 }
-
