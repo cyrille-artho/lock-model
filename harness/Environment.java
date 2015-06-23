@@ -21,6 +21,8 @@ public class Environment {
     int li3 = Verify.getInt(0, locks.length - 1);
     Thread t0 = new TestThread(new int[]{li1, li2, li3});
     t0.setPriority(Verify.getInt(1, 3));
+    t0.setRealPriority();
+    t0.setCurrentPriority();
     System.out.println("Thread 0 has priority " + t0.getPriority() +
 		       " and uses locks " + li1 + ", " + li2 +
 		       ", and " + li3 + ".");
@@ -29,6 +31,8 @@ public class Environment {
       int li = Verify.getInt(0, locks.length - 1);
       Thread t = new TestThread(new int[]{li});
       t.setPriority(Verify.getInt(1, 3));
+      t.setRealPriority();
+      t.setCurrentPriority();
       System.out.println("Thread " + Integer.toString(i + 1) +
 			 " has priority " + t.getPriority() +
 			 " and uses lock " + li + ".");

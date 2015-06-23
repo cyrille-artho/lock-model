@@ -1,0 +1,79 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+Diagnostics	Diagnostics.java	/^public class Diagnostics extends SearchListenerAdapter {$/;"	c
+propertyViolated	Diagnostics.java	/^  public void propertyViolated(Search search) {$/;"	m	class:Diagnostics
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+Condition	base/Condition.java	/^public class Condition {$/;"	c
+base	base/Condition.java	/^package base;$/;"	p
+Lock	base/Lock.java	/^public class Lock {$/;"	c
+base	base/Lock.java	/^package base;$/;"	p
+count	base/Lock.java	/^  int count = 0;$/;"	f	class:Lock
+lock	base/Lock.java	/^  public synchronized void lock() {$/;"	m	class:Lock
+newCondition	base/Lock.java	/^  public Condition newCondition() { \/\/ stub$/;"	m	class:Lock
+owner	base/Lock.java	/^  Object owner;$/;"	f	class:Lock
+unlock	base/Lock.java	/^  public synchronized void unlock() {$/;"	m	class:Lock
+PrioLock	base/PrioLock.java	/^public class PrioLock extends Lock {$/;"	c
+base	base/PrioLock.java	/^package base;$/;"	p
+count	base/PrioLock.java	/^  int count = 0;$/;"	f	class:PrioLock
+lock	base/PrioLock.java	/^  public void lock() {$/;"	m	class:PrioLock
+owner	base/PrioLock.java	/^  Object owner;$/;"	f	class:PrioLock
+topPrio	base/PrioLock.java	/^  int topPrio = Integer.MAX_VALUE; \/\/ dummy value$/;"	f	class:PrioLock
+unlock	base/PrioLock.java	/^  public synchronized void unlock() {$/;"	m	class:PrioLock
+updateTopPrio	base/PrioLock.java	/^  void updateTopPrio(Thread t) { \/\/ smaller priority has precedence$/;"	m	class:PrioLock
+waitCount	base/PrioLock.java	/^  int waitCount = 0;$/;"	f	class:PrioLock
+waitingThreads	base/PrioLock.java	/^  Thread waitingThreads[] = new Thread[Environment.N_THREADS];$/;"	f	class:PrioLock
+Environment	harness/Environment.java	/^public class Environment {$/;"	c
+N_THREADS	harness/Environment.java	/^  public final static int N_THREADS = 2;$/;"	f	class:Environment
+createLock	harness/Environment.java	/^  static Lock createLock(int id) {$/;"	m	class:Environment
+harness	harness/Environment.java	/^package harness;$/;"	p
+locks	harness/Environment.java	/^  static final Lock[] locks = { createLock(1), createLock(2), createLock(3) };$/;"	f	class:Environment
+main	harness/Environment.java	/^  public final static void main(String[] args) {$/;"	m	class:Environment
+TestThread	harness/TestThread.java	/^  public TestThread(int lockIdx[]) {$/;"	m	class:TestThread
+TestThread	harness/TestThread.java	/^public class TestThread extends RTEMSThread {$/;"	c
+harness	harness/TestThread.java	/^package harness;$/;"	p
+idx	harness/TestThread.java	/^  int idx[]; \/\/ for simpler diagnosis later (if I get some help on JPF)$/;"	f	class:TestThread
+locks	harness/TestThread.java	/^  Lock locks[];$/;"	f	class:TestThread
+run	harness/TestThread.java	/^  public void run() {$/;"	m	class:TestThread
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+ChainControl	rtems/ChainControl.java	/^	public ChainControl(){$/;"	m	class:ChainControl
+ChainControl	rtems/ChainControl.java	/^public class ChainControl{$/;"	c
+init	rtems/ChainControl.java	/^	public void init(){$/;"	m	class:ChainControl
+next	rtems/ChainControl.java	/^	Object next;$/;"	f	class:ChainControl
+prev	rtems/ChainControl.java	/^	Object prev;$/;"	f	class:ChainControl
+rtems	rtems/ChainControl.java	/^package rtems;$/;"	p
+Mutex	rtems/Mutex.java	/^	public Mutex(int idx){$/;"	m	class:Mutex
+Mutex	rtems/Mutex.java	/^public class Mutex extends Lock {$/;"	c
+MyComparator	rtems/Mutex.java	/^class MyComparator implements Comparator<RTEMSThread>$/;"	c
+comparator	rtems/Mutex.java	/^	MyComparator comparator = new MyComparator();$/;"	f	class:Mutex
+compare	rtems/Mutex.java	/^	public int compare(RTEMSThread t1, RTEMSThread t2)$/;"	m	class:MyComparator
+holder	rtems/Mutex.java	/^	RTEMSThread holder;$/;"	f	class:Mutex
+id	rtems/Mutex.java	/^	int id;$/;"	f	class:Mutex
+lock	rtems/Mutex.java	/^	public synchronized void lock() {$/;"	m	class:Mutex
+nestCount	rtems/Mutex.java	/^	int nestCount;$/;"	f	class:Mutex
+priorityBefore	rtems/Mutex.java	/^	int priorityBefore=-1;$/;"	f	class:Mutex
+priorityRaiseFilter	rtems/Mutex.java	/^	public boolean priorityRaiseFilter(int priority){$/;"	m	class:Mutex
+reEnqueue	rtems/Mutex.java	/^	public void reEnqueue()$/;"	m	class:Mutex
+rtems	rtems/Mutex.java	/^package rtems;$/;"	p
+unlock	rtems/Mutex.java	/^	public synchronized void unlock() {$/;"	m	class:Mutex
+updatePriority	rtems/Mutex.java	/^	public void updatePriority(int priority)$/;"	m	class:Mutex
+updateRecPriority	rtems/Mutex.java	/^	public void updateRecPriority(int priority)$/;"	m	class:Mutex
+validator	rtems/Mutex.java	/^	public void validator(int from){$/;"	m	class:Mutex
+waitQueue	rtems/Mutex.java	/^	PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);$/;"	f	class:Mutex
+OrderList	rtems/OrderList.java	/^	public OrderList(){$/;"	m	class:OrderList
+OrderList	rtems/OrderList.java	/^public class OrderList{$/;"	c
+node	rtems/OrderList.java	/^	Object node;$/;"	f	class:OrderList
+priorityBefore	rtems/OrderList.java	/^	int priorityBefore;$/;"	f	class:OrderList
+rtems	rtems/OrderList.java	/^package rtems;$/;"	p
+RTEMSThread	rtems/RTEMSThread.java	/^	public RTEMSThread() {$/;"	m	class:RTEMSThread
+RTEMSThread	rtems/RTEMSThread.java	/^public class RTEMSThread extends Thread {$/;"	c
+currentPriority	rtems/RTEMSThread.java	/^	int currentPriority;$/;"	f	class:RTEMSThread
+getMutexIndex	rtems/RTEMSThread.java	/^	public int getMutexIndex(Mutex obj){$/;"	m	class:RTEMSThread
+mutexOrderList	rtems/RTEMSThread.java	/^	ArrayList<Mutex> mutexOrderList;  \/\/it is a linkedList which stores acquired mutex objects in LIFO order.  $/;"	f	class:RTEMSThread
+realPriority	rtems/RTEMSThread.java	/^	int realPriority;$/;"	f	class:RTEMSThread
+resourceCount	rtems/RTEMSThread.java	/^	int resourceCount;$/;"	f	class:RTEMSThread
+rtems	rtems/RTEMSThread.java	/^package rtems;$/;"	p
+state	rtems/RTEMSThread.java	/^	Thread.State state;$/;"	f	class:RTEMSThread
+wait	rtems/RTEMSThread.java	/^	PriorityQueue<RTEMSThread> wait;$/;"	f	class:RTEMSThread
+WaitQueue	rtems/WaitQueue.java	/^public class WaitQueue {$/;"	c
