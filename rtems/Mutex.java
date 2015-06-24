@@ -29,7 +29,9 @@ public class Mutex extends Lock {
 					thisThread.state = Thread.State.WAITING;
 					if(priorityRaiseFilter(thisThread.currentPriority))
 					{
+						System.out.println("raising pr tid : "+ holder.getId() + "by tid: " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
 						updatePriority(thisThread.currentPriority);
+						System.out.println("updated pr for tid: "+holder.getId() +" pr: "+holder.currentPriority);
 						if(holder.wait!=null) 
 							reEnqueue();
 					}
@@ -76,16 +78,14 @@ public class Mutex extends Lock {
 			topMutex = thisThread.mutexOrderList.get(0);
 			assert this==topMutex;		
 			topMutex = thisThread.mutexOrderList.remove(0);
-			System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before: "+ thisThread.getPriority());
+			System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority());
 			thisThread.setPriority(this.priorityBefore);
 			thisThread.currentPriority = this.priorityBefore;
 			System.out.println("Holder Thread: "+thisThread.getId()+ " priority: " + thisThread.getPriority());
 			System.out.println("Released Mutex: "+topMutex.id);
-			validator(2);
+			validator();
 			assert holder!=null;
 			assert holder.wait==null;
-			//if(holder.wait!=null)
-			//	reEnqueue();
 			holder = waitQueue.poll();			
 			if(holder != null){
 				assert holder.state==Thread.State.WAITING;
@@ -96,17 +96,10 @@ public class Mutex extends Lock {
 		}			
 	}
 
-	public void validator(int from){
+	public void validator(){
 		RTEMSThread chkThr;
 		Mutex chkMtx;
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
-		/*if(from==1){
-			System.out.println("Validator called from lock");
-		}
-		else{
-			System.out.println("validator called from unlock");
-		}*/
-
 		Iterator<Mutex> mItr = thisThread.mutexOrderList.iterator();
 		while (mItr.hasNext()){
 			chkMtx = mItr.next();
