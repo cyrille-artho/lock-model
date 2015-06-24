@@ -13,9 +13,11 @@ public class Mutex extends Lock {
 	MyComparator comparator = new MyComparator();
 	PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
 	public Mutex(int idx){
+
 		this.id = idx;
 		this.nestCount = 0;
 		this.priorityBefore = -1;
+		System.out.println("mutex init called with id: "+ this.id+" by thread-id: "+Thread.currentThread().getId());
 	}
 	 
 	public synchronized void lock() {
@@ -32,10 +34,11 @@ public class Mutex extends Lock {
 							reEnqueue();
 					}
 					if(this.waitQueue.contains(thisThread)==false){
+						System.out.println("Adding thread :" + thisThread.getId() + " in waitQ of mutex: "+this.id);
 						this.waitQueue.offer(thisThread);
 					}
 					thisThread.wait = waitQueue;
-					validator(1);
+					//validator(1);
 					wait();
 							
 					}catch (InterruptedException e) 
@@ -43,6 +46,7 @@ public class Mutex extends Lock {
 				
 			}
 			//if code reaches here it means it has the potential to acquire the mutex
+			System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ this.id);
 			assert thisThread.getState() != Thread.State.WAITING;
 			if(holder==null)
 			{
@@ -72,6 +76,7 @@ public class Mutex extends Lock {
 			topMutex = thisThread.mutexOrderList.get(0);
 			assert this==topMutex;		
 			topMutex = thisThread.mutexOrderList.remove(0);
+			System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before: "+ thisThread.getPriority());
 			thisThread.setPriority(this.priorityBefore);
 			thisThread.currentPriority = this.priorityBefore;
 			System.out.println("Holder Thread: "+thisThread.getId()+ " priority: " + thisThread.getPriority());
@@ -95,12 +100,12 @@ public class Mutex extends Lock {
 		RTEMSThread chkThr;
 		Mutex chkMtx;
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
-		if(from==1){
+		/*if(from==1){
 			System.out.println("Validator called from lock");
 		}
 		else{
 			System.out.println("validator called from unlock");
-		}
+		}*/
 
 		Iterator<Mutex> mItr = thisThread.mutexOrderList.iterator();
 		while (mItr.hasNext()){
