@@ -14,7 +14,7 @@ public class RTEMSThread extends Thread {
 	public List<Mutex> mutexOrderList;  //it is a linkedList which stores acquired mutex objects in LIFO order.
 
 	public RTEMSThread() {
-		this.mutexOrderList = Collections.synchronizedList(new ArrayList<Mutex>());
+		this.mutexOrderList = /*Collections.synchronizedList(*/new ArrayList<Mutex>()/*)*/;
 		this.state = this.getState();
 		this.currentPriority = this.realPriority = this.getPriority();
 	}

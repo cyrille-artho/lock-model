@@ -20,8 +20,9 @@ public class Mutex extends Lock {
 		this.holder=null;
 	}
 	 
-	public synchronized void lock() {
-		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();	
+	public void lock() {
+		synchronized(Mutex.class) {
+			RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
 			while((holder!=null) && (holder!=thisThread))
 			{
 				assert (thisThread.currentPriority == thisThread.getPriority());
@@ -41,8 +42,8 @@ public class Mutex extends Lock {
 						this.waitQueue.offer(thisThread);
 					}
 					thisThread.wait = waitQueue;
-					//validator(1);
-					wait();
+					validator();
+					Mutex.class.wait();
 							
 					}catch (InterruptedException e) 
 					{}
@@ -66,9 +67,11 @@ public class Mutex extends Lock {
 			}
 			this.nestCount++;
 			thisThread.resourceCount++;
+		}
 	}
 
-	public synchronized void unlock() {
+	public void unlock() {
+		synchronized(Mutex.class) {
 		Mutex topMutex=null;
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
 		RTEMSThread candidateThr;
@@ -97,11 +100,12 @@ public class Mutex extends Lock {
 				assert holder.state==Thread.State.WAITING;
 				holder.state = Thread.State.RUNNABLE;
 				holder.wait=null;
-				notifyAll();
+				Mutex.class.notifyAll();
 			//	System.out.println("Released Mutex: "+topMutex.id+" by thread: "+thisThread.getId());
 			}
 			//System.out.println(" holder = null Released Mutex: "+topMutex.id+" by thread: "+thisThread.getId());
 		}			
+		}
 	}
 
 	public void validator(){
