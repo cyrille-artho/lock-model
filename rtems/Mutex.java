@@ -98,9 +98,9 @@ public class Mutex extends Lock {
 				holder.state = Thread.State.RUNNABLE;
 				holder.wait=null;
 				notifyAll();
-				System.out.println("Released Mutex: "+topMutex.id+" by thread: "+thisThread.getId());
+			//	System.out.println("Released Mutex: "+topMutex.id+" by thread: "+thisThread.getId());
 			}
-			System.out.println(" holder = null Released Mutex: "+topMutex.id+" by thread: "+thisThread.getId());
+			//System.out.println(" holder = null Released Mutex: "+topMutex.id+" by thread: "+thisThread.getId());
 		}			
 	}
 
@@ -140,21 +140,20 @@ public class Mutex extends Lock {
 		
 		int i;
 		Mutex candidate;
-		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
-		System.out.println("thread id "+ thisThread.getId() + " in updateRecPriority");
-		Mutex chkMtx;
+		//RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+		//System.out.println("thread id "+ thisThread.getId() + " in updateRecPriority");
+		//Mutex chkMtx;
 		assert this.holder!=null;
-		Iterator<Mutex> mItr = this.holder.mutexOrderList.iterator();
+		//Iterator<Mutex> mItr = this.holder.mutexOrderList.iterator();
 		int mutexIdx = this.holder.getMutexIndex(this);
-		System.out.println("chcking holder id before crashing: "+this.holder.getId()+" And iterating over its list of mutex");
-		while (mItr.hasNext()){
-			chkMtx = mItr.next();
-			System.out.println("Checking--->Mutex: "+chkMtx.id);
-		}
+		//System.out.println("chcking holder id before crashing: "+this.holder.getId()+" And iterating over its list of mutex");
+		//while (mItr.hasNext()){
+		//	chkMtx = mItr.next();
+		//	System.out.println("Checking--->Mutex: "+chkMtx.id);
+		//}
 
 		//Assertion check
-		assert mutexIdx!=-1;
-		updatePriority(priority);	
+		//assert mutexIdx!=-1;	
 		for(i=mutexIdx-1;i>=0;i--)
 		{
 			candidate = holder.mutexOrderList.get(i);
@@ -162,6 +161,7 @@ public class Mutex extends Lock {
 				break;
 			candidate.priorityBefore = priority;
 		}
+		updatePriority(priority);
 	
 	}
 	
