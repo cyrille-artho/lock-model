@@ -170,7 +170,7 @@ public class Mutex extends Lock {
 		//if holder thread is waiting on someother mutex reenqueue that thread with updated priority.
 		PriorityQueue<RTEMSThread> pqueue;
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
-		System.out.println("thread: "+holder.getId()+" being re-enqued by thread: ",thisThread.getId())
+		System.out.println("thread: "+holder.getId()+" being re-enqued by thread: " + thisThread.getId());
 		pqueue = holder.wait;
 		pqueue.remove(holder);
     //<--------- Nice bug uncovered!!----------------->
