@@ -1,6 +1,8 @@
 package rtems;
-import java.util.PriorityQueue;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.PriorityQueue;
 
 public class RTEMSThread extends Thread {
   // TODO: add extra priority field etc.
@@ -9,10 +11,10 @@ public class RTEMSThread extends Thread {
 	public Thread.State state;
 	public int currentPriority;
 	public int realPriority;
-	public ArrayList<Mutex> mutexOrderList;  //it is a linkedList which stores acquired mutex objects in LIFO order.  
+	public List<Mutex> mutexOrderList;  //it is a linkedList which stores acquired mutex objects in LIFO order.
 
 	public RTEMSThread() {
-		this.mutexOrderList = new ArrayList<Mutex>();
+		this.mutexOrderList = Collections.synchronizedList(new ArrayList<Mutex>());
 		this.state = this.getState();
 		this.currentPriority = this.realPriority = this.getPriority();
 	}

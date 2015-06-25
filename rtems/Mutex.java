@@ -153,7 +153,7 @@ public class Mutex extends Lock {
 		//}
 
 		//Assertion check
-		//assert mutexIdx!=-1;	
+		assert mutexIdx!=-1;
 		for(i=mutexIdx-1;i>=0;i--)
 		{
 			candidate = holder.mutexOrderList.get(i);
