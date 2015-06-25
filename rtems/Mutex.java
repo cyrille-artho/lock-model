@@ -169,8 +169,15 @@ public class Mutex extends Lock {
 	{
 		//if holder thread is waiting on someother mutex reenqueue that thread with updated priority.
 		PriorityQueue<RTEMSThread> pqueue;
+		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+		System.out.println("thread: "+holder.getId()+" being re-enqued by thread: ",thisThread.getId())
 		pqueue = holder.wait;
 		pqueue.remove(holder);
+    //<--------- Nice bug uncovered!!----------------->
+	/* thread 2 raised priority of thread 1 from 3 to 1. Thread 1 was already waiting in queue for mutex 2 hold
+	by thread 3 whose priority is 2. So again we got unbounded priority inheritance problem. We should now  for 
+	correct behavior should raise thread 3 priority for avoiding UPI"*/
+
 		pqueue.offer(holder);
 	}
 }
