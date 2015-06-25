@@ -17,7 +17,7 @@ public class Mutex extends Lock {
 		this.id = idx;
 		this.nestCount = 0;
 		this.priorityBefore = -1;
-		System.out.println("mutex init called with id: "+ this.id+" by thread-id: "+Thread.currentThread().getId());
+		this.holder=null;
 	}
 	 
 	public synchronized void lock() {
@@ -29,9 +29,10 @@ public class Mutex extends Lock {
 					thisThread.state = Thread.State.WAITING;
 					if(priorityRaiseFilter(thisThread.currentPriority))
 					{
-						System.out.println("raising pr tid : "+ holder.getId() + "by tid: " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
-						updatePriority(thisThread.currentPriority);
-						System.out.println("updated pr for tid: "+holder.getId() +" pr: "+holder.currentPriority);
+						System.out.println("raising pr of tid : "+ holder.getId() + "by tid: " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+						updateRecPriority(thisThread.currentPriority);
+						//<-----------------------------------Thread 2 reaches till here(fails in updateRecPriority------------->
+						System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
 						if(holder.wait!=null) 
 							reEnqueue();
 					}
@@ -57,8 +58,11 @@ public class Mutex extends Lock {
 			}
 			if(this.nestCount==0)
 			{
+				assert !(thisThread.mutexOrderList.contains(this));
+				System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ this.id + " to its mutexOrderList");
 				this.priorityBefore = thisThread.currentPriority;
 				thisThread.mutexOrderList.add(0, this);
+				assert thisThread.mutexOrderList.contains(this);
 			}
 			this.nestCount++;
 			thisThread.resourceCount++;
@@ -78,21 +82,25 @@ public class Mutex extends Lock {
 			topMutex = thisThread.mutexOrderList.get(0);
 			assert this==topMutex;		
 			topMutex = thisThread.mutexOrderList.remove(0);
-			System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority());
+		//<---------------------------------------------------------------Thread 1 crosses this-------------->
+
+			System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + this.id);
 			thisThread.setPriority(this.priorityBefore);
 			thisThread.currentPriority = this.priorityBefore;
-			System.out.println("Holder Thread: "+thisThread.getId()+ " priority: " + thisThread.getPriority());
-			System.out.println("Released Mutex: "+topMutex.id);
+			System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + this.id);
 			validator();
 			assert holder!=null;
 			assert holder.wait==null;
-			holder = waitQueue.poll();			
+		//<--------------------------------------------But Thread 1 does not crosses this----------------------->	
+			this.holder = waitQueue.poll();			
 			if(holder != null){
 				assert holder.state==Thread.State.WAITING;
 				holder.state = Thread.State.RUNNABLE;
 				holder.wait=null;
 				notifyAll();
+				System.out.println("Released Mutex: "+topMutex.id+" by thread: "+thisThread.getId());
 			}
+			System.out.println(" holder = null Released Mutex: "+topMutex.id+" by thread: "+thisThread.getId());
 		}			
 	}
 
@@ -128,9 +136,22 @@ public class Mutex extends Lock {
 
 	public void updateRecPriority(int priority)
 	{
-		int mutexIdx = holder.getMutexIndex(this);
+		
+		
 		int i;
 		Mutex candidate;
+		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+		System.out.println("thread id "+ thisThread.getId() + " in updateRecPriority");
+		Mutex chkMtx;
+		assert this.holder!=null;
+		Iterator<Mutex> mItr = this.holder.mutexOrderList.iterator();
+		int mutexIdx = this.holder.getMutexIndex(this);
+		System.out.println("chcking holder id before crashing: "+this.holder.getId()+" And iterating over its list of mutex");
+		while (mItr.hasNext()){
+			chkMtx = mItr.next();
+			System.out.println("Checking--->Mutex: "+chkMtx.id);
+		}
+
 		//Assertion check
 		assert mutexIdx!=-1;
 		updatePriority(priority);	
