@@ -12,6 +12,8 @@ public class Mutex extends Lock {
 	int priorityBefore=-1;
 	MyComparator comparator = new MyComparator();
 	PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
+	static Object globalLock = new Object(); // models kernel-wide lock
+
 	public Mutex(int idx){
 
 		this.id = idx;
@@ -21,7 +23,7 @@ public class Mutex extends Lock {
 	}
 	 
 	public void lock() {
-		synchronized(Mutex.class) {
+		synchronized(globalLock) {
 			RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
 			while((holder!=null) && (holder!=thisThread))
 			{
@@ -43,7 +45,7 @@ public class Mutex extends Lock {
 					}
 					thisThread.wait = waitQueue;
 					validator();
-					Mutex.class.wait();
+					globalLock.wait();
 							
 					}catch (InterruptedException e) 
 					{}
@@ -71,7 +73,7 @@ public class Mutex extends Lock {
 	}
 
 	public void unlock() {
-		synchronized(Mutex.class) {
+		synchronized(globalLock) {
 		Mutex topMutex=null;
 		RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
 		RTEMSThread candidateThr;
@@ -100,7 +102,7 @@ public class Mutex extends Lock {
 				assert holder.state==Thread.State.WAITING;
 				holder.state = Thread.State.RUNNABLE;
 				holder.wait=null;
-				Mutex.class.notifyAll();
+				globalLock.notifyAll();
 			//	System.out.println("Released Mutex: "+topMutex.id+" by thread: "+thisThread.getId());
 			}
 			//System.out.println(" holder = null Released Mutex: "+topMutex.id+" by thread: "+thisThread.getId());
