@@ -1,0 +1,463 @@
+Script started on Thu 25 Jun 2015 06:04:20 PM PDT
+]0;saurabh@saurabh-Inspiron-N5010: ~/model_checking/new2-lockmodel/lock-modelsaurabh@saurabh-Inspiron-N5010:~/model_checking/new2-lockmodel/lock-model$ ./jpf.sh 
+JavaPathfinder core system v8.0 (rev 25+) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+harness.Environment.main()
+
+====================================================== search started: 6/25/15 6:04 PM
+Thread 0 has priority 3 and uses locks 1, and 2.
+Thread 2 has priority 1 and uses lock 1.
+thread-id:1 acquiring mutex 1
+thread: 1adding mutex: 1 to its mutexOrderList
+thread-id:1 acquiring mutex 2
+thread: 1adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+--->Mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 1 while releasing mutex: 2
+--->Mutex: 1
+------>Thread-id: 2 priority: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+thread: 1adding mutex: 2 to its mutexOrderList
+thread: 1adding mutex: 2 to its mutexOrderList
+thread: 1adding mutex: 2 to its mutexOrderList
+thread: 1adding mutex: 2 to its mutexOrderList
+thread: 1adding mutex: 2 to its mutexOrderList
+thread-id:1 acquiring mutex 2
+thread-id:1 acquiring mutex 2
+thread-id:1 acquiring mutex 2
+thread-id:1 acquiring mutex 2
+thread-id:1 acquiring mutex 2
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+thread-id:1 acquiring mutex 2
+thread: 1adding mutex: 2 to its mutexOrderList
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+thread: 1adding mutex: 1 to its mutexOrderList
+thread: 1adding mutex: 1 to its mutexOrderList
+thread: 1adding mutex: 1 to its mutexOrderList
+thread: 1adding mutex: 1 to its mutexOrderList
+thread: 1adding mutex: 1 to its mutexOrderList
+thread-id:1 acquiring mutex 1
+thread-id:1 acquiring mutex 1
+thread-id:1 acquiring mutex 1
+thread-id:1 acquiring mutex 1
+thread-id:1 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Adding thread :1 in waitQ of mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:1 acquiring mutex 1
+thread: 1adding mutex: 1 to its mutexOrderList
+thread-id:1 acquiring mutex 2
+thread: 1adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+--->Mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+--->Mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+thread: 1adding mutex: 2 to its mutexOrderList
+thread-id:1 acquiring mutex 2
+thread: 1adding mutex: 1 to its mutexOrderList
+thread-id:1 acquiring mutex 1
+Adding thread :1 in waitQ of mutex: 1
+Adding thread :1 in waitQ of mutex: 1
+Adding thread :1 in waitQ of mutex: 1
+Adding thread :1 in waitQ of mutex: 1
+Adding thread :1 in waitQ of mutex: 1
+Adding thread :1 in waitQ of mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:1 acquiring mutex 1
+thread: 1adding mutex: 1 to its mutexOrderList
+thread-id:1 acquiring mutex 2
+thread: 1adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+--->Mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+--->Mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+thread: 1adding mutex: 2 to its mutexOrderList
+thread-id:1 acquiring mutex 2
+thread: 1adding mutex: 1 to its mutexOrderList
+thread-id:1 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+thread-id:1 acquiring mutex 1
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+thread: 1adding mutex: 1 to its mutexOrderList
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+thread-id:1 acquiring mutex 2
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+thread: 1adding mutex: 2 to its mutexOrderList
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+--->Mutex: 1
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+Thread 2 has priority 1 and uses lock 1.
+thread-id:1 acquiring mutex 1
+thread: 1adding mutex: 1 to its mutexOrderList
+thread-id:1 acquiring mutex 2
+thread: 1adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+--->Mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+thread-id:1 acquiring mutex 1
+thread: 1adding mutex: 1 to its mutexOrderList
+thread-id:1 acquiring mutex 2
+thread: 1adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+--->Mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+thread-id:1 acquiring mutex 1
+thread: 1adding mutex: 1 to its mutexOrderList
+thread-id:1 acquiring mutex 2
+thread: 1adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+--->Mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Thread 2 has priority 1 and uses lock 1.
+thread-id:1 acquiring mutex 2
+thread: 1adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+--->Mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Thread 2 has priority 1 and uses lock 1.
+thread-id:1 acquiring mutex 1
+thread: 1adding mutex: 1 to its mutexOrderList
+thread-id:1 acquiring mutex 2
+thread: 1adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+--->Mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Thread 2 has priority 1 and uses lock 1.
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:03
+states:             new=4993,visited=7321,backtracked=12314,end=3858
+search:             maxDepth=334,constraints=0
+choice generators:  thread=4845 (signal=23,lock=270,sharedRef=3868,threadApi=23,reschedule=661), data=0
+heap:               new=7555,released=16123,maxLive=512,gcCycles=12031
+instructions:       160247
+max memory:         167MB
+loaded code:        classes=76,methods=1771
+
+====================================================== search finished: 6/25/15 6:04 PM
+]0;saurabh@saurabh-Inspiron-N5010: ~/model_checking/new2-lockmodel/lock-modelsaurabh@saurabh-Inspiron-N5010:~/model_checking/new2-lockmodel/lock-model$ exit
+exit
+
+Script done on Thu 25 Jun 2015 06:04:32 PM PDT

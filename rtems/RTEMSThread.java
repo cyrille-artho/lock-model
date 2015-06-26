@@ -20,15 +20,15 @@ public class RTEMSThread extends Thread {
 	}
 
 	public void setCurrentPriority(){
-		this.currentPriority = getPriority();
+		currentPriority = getPriority();
 	}
 
 	public void setRealPriority(){
-		this.realPriority = getPriority();
+		realPriority = getPriority();
 	}
 
 	public int getMutexIndex(Mutex obj){
-		return this.mutexOrderList.indexOf(obj);
+		return mutexOrderList.indexOf(obj);
 	}
 
 }

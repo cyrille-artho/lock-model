@@ -13,7 +13,6 @@ public class Environment {
 
   static Lock createLock(int id) {
     // factory method to swap out lock impl. in one place
-    System.out.println("mutex id: "+id);
     return new /*Prio*/Mutex(id);
   }
 
