@@ -24,5 +24,6 @@ public class TestThread extends RTEMSThread {
     for (int i = idx.length-1; i>= 0; i--) {
       locks[i].unlock();
     }
+    assert currentPriority==realPriority;
   }
 }
