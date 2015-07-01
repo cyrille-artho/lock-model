@@ -149,6 +149,8 @@ there should be no higher priority thread contending on any of the mutex still h
 
 	public void updatePriority(int priority)
 	{
+		RTEMSThread parentThread;
+
 		if(USE_MODEL==REC_UPDATE)
 		{
 			updateRecPriority(priority);
@@ -157,8 +159,16 @@ there should be no higher priority thread contending on any of the mutex still h
 		{
 			updateNonRecPriority(priority);
 		}
-		if(holder.wait!=null) 
+		if(holder.wait!=null){
+			assert holder.trylock!=null;
 			reEnqueue();
+			parentThread = holder.trylock.holder;
+			if(parentThread.currentPriority > holder.currentPriority)
+			{
+				holder.trylock.updatePriority(holder.currentPriority);
+			}
+
+		}
 
 	}
 
