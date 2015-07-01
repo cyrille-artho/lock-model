@@ -37,7 +37,7 @@ public class Mutex extends Lock {
 							- updateRecPriority() solves the unbounded priority inheritance problem.
 							- updatePriority() is the current behavior of RTEMS which has this problem.
 						*/
-						updateRecPriority(thisThread.currentPriority);
+						updatePriority(thisThread.currentPriority);
 						System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
 						if(holder.wait!=null) 
 							reEnqueue();
@@ -47,6 +47,7 @@ public class Mutex extends Lock {
 						waitQueue.offer(thisThread);
 					}
 					thisThread.wait = waitQueue;
+					thisThread.trylock = this;
 					validator();
 					globalLock.wait();
 							
@@ -99,12 +100,14 @@ public class Mutex extends Lock {
 			validator();
 			assert holder!=null;
 			assert holder.wait==null;
+			assert holder.trylock==null;
 		//<--------------------------------------------But Thread 1 does not crosses this----------------------->	
 			holder = waitQueue.poll();			
 			if(holder != null){
 				assert holder.state==Thread.State.WAITING;
 				holder.state = Thread.State.RUNNABLE;
-				holder.wait=null;
+				holder.wait = null;
+				holder.trylock = null;
 				globalLock.notifyAll();
 			}
 		}			
@@ -177,12 +180,13 @@ there should be no higher priority thread contending on any of the mutex still h
 		System.out.println("thread: "+holder.getId()+" being re-enqued by thread: " + thisThread.getId());
 		pqueue = holder.wait;
 		pqueue.remove(holder);
+		pqueue.offer(holder);
     //<--------- Nice bug uncovered!! and coincidently matches with spsem03----------------->
 	/* thread 2 raised priority of thread 1 from 3 to 1. Thread 1 was already waiting in queue for mutex 2 hold
 	by thread 3 whose priority is 2. So again we got unbounded priority inheritance problem. We should now  for 
 	correct behavior should raise thread 3 priority for avoiding UPI"*/
+		
 
-		pqueue.offer(holder);
 	}
 }
 
