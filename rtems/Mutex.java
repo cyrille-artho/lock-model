@@ -13,6 +13,10 @@ public class Mutex extends Lock {
 	MyComparator comparator = new MyComparator();
 	PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
 	static Object globalLock = new Object(); // models kernel-wide lock
+	public static final int REC_UPDATE = 1;
+  	public static final int NONREC_UPDATE = 0;
+	public static int USE_MODEL=NONREC_UPDATE;
+
 
 	public Mutex(int idx){
 
@@ -21,7 +25,12 @@ public class Mutex extends Lock {
 		this.priorityBefore = -1;
 		this.holder=null;
 	}
-	 
+
+	public static void setUpdateMethod(int method)
+	{
+		USE_MODEL = method;
+	}
+
 	public void lock() {
 		synchronized(globalLock) {
 			RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
@@ -33,14 +42,9 @@ public class Mutex extends Lock {
 					if(priorityRaiseFilter(thisThread.currentPriority))
 					{
 						System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
-						/*
-							- updateRecPriority() solves the unbounded priority inheritance problem.
-							- updatePriority() is the current behavior of RTEMS which has this problem.
-						*/
 						updatePriority(thisThread.currentPriority);
 						System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
-						if(holder.wait!=null) 
-							reEnqueue();
+						
 					}
 					if(waitQueue.contains(thisThread)==false){
 						System.out.println("Adding thread :" + thisThread.getId() + " in waitQ of mutex: "+id);
@@ -145,8 +149,24 @@ there should be no higher priority thread contending on any of the mutex still h
 
 	public void updatePriority(int priority)
 	{
+		if(USE_MODEL==REC_UPDATE)
+		{
+			updateRecPriority(priority);
+		}
+		else
+		{
+			updateNonRecPriority(priority);
+		}
+		if(holder.wait!=null) 
+			reEnqueue();
+
+	}
+
+	public void updateNonRecPriority(int priority)
+	{
 		holder.currentPriority = priority;
 		holder.setPriority(priority);
+
 	}
 
 	public void updateRecPriority(int priority)
@@ -166,7 +186,8 @@ there should be no higher priority thread contending on any of the mutex still h
 				break;
 			candidate.priorityBefore = priority;
 		}
-		updatePriority(priority);
+		holder.currentPriority = priority;
+		holder.setPriority(priority);
 
 		/* need to include fix for spsem03 test case of indirect reference */
 	
