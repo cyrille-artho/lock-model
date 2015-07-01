@@ -9,6 +9,11 @@ import gov.nasa.jpf.vm.Verify;
 
 public class Environment {
   public final static int N_THREADS = 3;
+  /*
+  Mutex.REC_UPDATE -  for solution model.
+  Mutex.NONREC_UPDATE -  for RTEMS default model.
+  */
+
   public final static int model = Mutex.REC_UPDATE;
   static final Lock[] locks = { createLock(0), createLock(1), createLock(2) };
 
