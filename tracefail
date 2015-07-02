@@ -1,0 +1,2965 @@
+Script started on Thu 02 Jul 2015 03:52:08 PM PDT
+]0;saurabh@saurabh-Inspiron-N5010: ~/model_checking/new2-lockmodel/lock-modelsaurabh@saurabh-Inspiron-N5010:~/model_checking/new2-lockmodel/lock-model$ ./jpf.sh 
+JavaPathfinder core system v8.0 (rev 25+) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+harness.Environment.main()
+
+====================================================== search started: 7/2/15 3:52 PM
+Thread 0 has priority 3 and uses locks 1, and 2.
+Thread 2 has priority 1 and uses lock 1.
+Thread 3 has priority 2 and uses lock 2.
+thread-id:1 acquiring mutex 1
+thread: 1adding mutex: 1 to its mutexOrderList
+thread-id:1 acquiring mutex 2
+thread: 1adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+--->Mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2 after stepdown ops-->current priority: 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 2before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:2 acquiring mutex 1
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread: 2adding mutex: 1 to its mutexOrderList
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+thread-id:2 acquiring mutex 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+Adding thread :2 in waitQ of mutex: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+updated pr for tid: 1 current pr: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+thread-id:3 acquiring mutex 2
+thread: 3adding mutex: 2 to its mutexOrderList
+Holder Thread: 3before resetting priority_before : 2 while releasing mutex: 2
+Holder Thread: 3 after stepdown ops-->current priority: 2 while releasing mutex: 2
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+--->Mutex: 1
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+Holder Thread: 1before resetting priority_before : 3 while releasing mutex: 2
+raising priority of thread: 1by thread : 2 frm :3 to: 1
+updated pr for tid: 1 current pr: 1
+Adding thread :2 in waitQ of mutex: 1
+Holder Thread: 1before resetting priority_before : 1 while releasing mutex: 2
+Holder Thread: 1 after stepdown ops-->current priority: 3 while releasing mutex: 2
+--->Mutex: 1
+------>Thread-id: 2 priority: 1
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at rtems.Mutex.validator(Mutex.java:138)
+	at rtems.Mutex.unlock(Mutex.java:104)
+	at harness.TestThread.run(TestThread.java:25)
+
+
+====================================================== trace #1
+------------------------------------------------------ transition #0 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"ROOT" ,1/1,isCascaded:false}
+      [3157 insn w/o sources]
+  harness/Environment.java:18    : static final Lock[] locks = { createLock(0), createLock(1), createLock(2) };
+  harness/Environment.java:22    : return new /*Prio*/Mutex(id);
+      [1 insn w/o sources]
+  rtems/Mutex.java:8             : public class Mutex extends Lock {
+      [2 insn w/o sources]
+  rtems/Mutex.java:8             : public class Mutex extends Lock {
+  rtems/Mutex.java:15            : static Object globalLock = new Object(); // models kernel-wide lock
+      [1 insn w/o sources]
+  rtems/Mutex.java:15            : static Object globalLock = new Object(); // models kernel-wide lock
+  rtems/Mutex.java:18            : public static int USE_MODEL=NONREC_UPDATE;
+  rtems/Mutex.java:1             : package rtems;
+  harness/Environment.java:22    : return new /*Prio*/Mutex(id);
+  rtems/Mutex.java:21            : public Mutex(int idx){
+  base/Lock.java:3               : public class Lock {
+      [1 insn w/o sources]
+  base/Lock.java:5               : int count = 0;
+  rtems/Mutex.java:12            : int priorityBefore=-1;
+  rtems/Mutex.java:13            : MyComparator comparator = new MyComparator();
+  rtems/Mutex.java:224           : class MyComparator implements Comparator<RTEMSThread>
+      [1 insn w/o sources]
+  rtems/Mutex.java:224           : class MyComparator implements Comparator<RTEMSThread>
+  rtems/Mutex.java:13            : MyComparator comparator = new MyComparator();
+  rtems/Mutex.java:14            : PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
+      [26 insn w/o sources]
+  rtems/Mutex.java:14            : PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
+  rtems/Mutex.java:23            : this.id = idx;
+  rtems/Mutex.java:24            : this.nestCount = 0;
+  rtems/Mutex.java:25            : this.priorityBefore = -1;
+  rtems/Mutex.java:26            : this.holder=null;
+  rtems/Mutex.java:27            : }
+  harness/Environment.java:22    : return new /*Prio*/Mutex(id);
+  harness/Environment.java:18    : static final Lock[] locks = { createLock(0), createLock(1), createLock(2) };
+  harness/Environment.java:22    : return new /*Prio*/Mutex(id);
+  rtems/Mutex.java:21            : public Mutex(int idx){
+  base/Lock.java:3               : public class Lock {
+      [1 insn w/o sources]
+  base/Lock.java:5               : int count = 0;
+  rtems/Mutex.java:12            : int priorityBefore=-1;
+  rtems/Mutex.java:13            : MyComparator comparator = new MyComparator();
+  rtems/Mutex.java:224           : class MyComparator implements Comparator<RTEMSThread>
+      [1 insn w/o sources]
+  rtems/Mutex.java:224           : class MyComparator implements Comparator<RTEMSThread>
+  rtems/Mutex.java:13            : MyComparator comparator = new MyComparator();
+  rtems/Mutex.java:14            : PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
+      [26 insn w/o sources]
+  rtems/Mutex.java:14            : PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
+  rtems/Mutex.java:23            : this.id = idx;
+  rtems/Mutex.java:24            : this.nestCount = 0;
+  rtems/Mutex.java:25            : this.priorityBefore = -1;
+  rtems/Mutex.java:26            : this.holder=null;
+  rtems/Mutex.java:27            : }
+  harness/Environment.java:22    : return new /*Prio*/Mutex(id);
+  harness/Environment.java:18    : static final Lock[] locks = { createLock(0), createLock(1), createLock(2) };
+  harness/Environment.java:22    : return new /*Prio*/Mutex(id);
+  rtems/Mutex.java:21            : public Mutex(int idx){
+  base/Lock.java:3               : public class Lock {
+      [1 insn w/o sources]
+  base/Lock.java:5               : int count = 0;
+  rtems/Mutex.java:12            : int priorityBefore=-1;
+  rtems/Mutex.java:13            : MyComparator comparator = new MyComparator();
+  rtems/Mutex.java:224           : class MyComparator implements Comparator<RTEMSThread>
+      [1 insn w/o sources]
+  rtems/Mutex.java:224           : class MyComparator implements Comparator<RTEMSThread>
+  rtems/Mutex.java:13            : MyComparator comparator = new MyComparator();
+  rtems/Mutex.java:14            : PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
+      [26 insn w/o sources]
+  rtems/Mutex.java:14            : PriorityQueue<RTEMSThread> waitQueue = new PriorityQueue<RTEMSThread>(7, comparator);
+  rtems/Mutex.java:23            : this.id = idx;
+  rtems/Mutex.java:24            : this.nestCount = 0;
+  rtems/Mutex.java:25            : this.priorityBefore = -1;
+  rtems/Mutex.java:26            : this.holder=null;
+  rtems/Mutex.java:27            : }
+  harness/Environment.java:22    : return new /*Prio*/Mutex(id);
+  harness/Environment.java:18    : static final Lock[] locks = { createLock(0), createLock(1), createLock(2) };
+  harness/Environment.java:1     : package harness;
+      [1 insn w/o sources]
+  harness/Environment.java:29    : int li1 = 1;
+  harness/Environment.java:30    : int li2 = 2;
+  harness/Environment.java:31    : Mutex.setUpdateMethod(model);
+  rtems/Mutex.java:31            : USE_MODEL = method;
+  rtems/Mutex.java:32            : }
+  harness/Environment.java:32    : RTEMSThread t0 = new TestThread(new int[]{li1, li2});
+      [1 insn w/o sources]
+  harness/TestThread.java:7      : public class TestThread extends RTEMSThread {
+      [2 insn w/o sources]
+  harness/TestThread.java:7      : public class TestThread extends RTEMSThread {
+  harness/TestThread.java:1      : package harness;
+  harness/Environment.java:32    : RTEMSThread t0 = new TestThread(new int[]{li1, li2});
+  harness/TestThread.java:12     : super();
+  rtems/RTEMSThread.java:17      : public RTEMSThread() {
+      [145 insn w/o sources]
+  rtems/RTEMSThread.java:18      : this.mutexOrderList = /*Collections.synchronizedList(*/new ArrayList<Mutex>()/*)*/;
+      [9 insn w/o sources]
+  rtems/RTEMSThread.java:18      : this.mutexOrderList = /*Collections.synchronizedList(*/new ArrayList<Mutex>()/*)*/;
+      [16 insn w/o sources]
+  rtems/RTEMSThread.java:18      : this.mutexOrderList = /*Collections.synchronizedList(*/new ArrayList<Mutex>()/*)*/;
+  rtems/RTEMSThread.java:19      : this.state = this.getState();
+      [9 insn w/o sources]
+  rtems/RTEMSThread.java:19      : this.state = this.getState();
+  rtems/RTEMSThread.java:20      : this.currentPriority = this.realPriority = this.getPriority();
+      [3 insn w/o sources]
+  rtems/RTEMSThread.java:20      : this.currentPriority = this.realPriority = this.getPriority();
+  rtems/RTEMSThread.java:21      : this.trylock = null;
+  rtems/RTEMSThread.java:22      : }
+  harness/TestThread.java:13     : idx = lockIdx;
+  harness/TestThread.java:14     : locks = new Lock[idx.length];
+  harness/TestThread.java:15     : for (int i = 0; i < idx.length; i++) {
+  harness/TestThread.java:16     : locks[i] = Environment.locks[idx[i]];
+  harness/TestThread.java:15     : for (int i = 0; i < idx.length; i++) {
+  harness/TestThread.java:16     : locks[i] = Environment.locks[idx[i]];
+  harness/TestThread.java:15     : for (int i = 0; i < idx.length; i++) {
+  harness/TestThread.java:18     : }
+  harness/Environment.java:32    : RTEMSThread t0 = new TestThread(new int[]{li1, li2});
+  harness/Environment.java:34    : t0.setPriority(3);
+      [15 insn w/o sources]
+  harness/Environment.java:35    : t0.setRealPriority();
+  rtems/RTEMSThread.java:29      : realPriority = getPriority();
+      [3 insn w/o sources]
+  rtems/RTEMSThread.java:29      : realPriority = getPriority();
+  rtems/RTEMSThread.java:30      : }
+  harness/Environment.java:36    : t0.setCurrentPriority();
+  rtems/RTEMSThread.java:25      : currentPriority = getPriority();
+      [3 insn w/o sources]
+  rtems/RTEMSThread.java:25      : currentPriority = getPriority();
+  rtems/RTEMSThread.java:26      : }
+  harness/Environment.java:37    : System.out.println("Thread 0 has priority " + t0.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:37    : System.out.println("Thread 0 has priority " + t0.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:37    : System.out.println("Thread 0 has priority " + t0.getPriority() +
+      [3 insn w/o sources]
+  harness/Environment.java:37    : System.out.println("Thread 0 has priority " + t0.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:37    : System.out.println("Thread 0 has priority " + t0.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:37    : System.out.println("Thread 0 has priority " + t0.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:37    : System.out.println("Thread 0 has priority " + t0.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:37    : System.out.println("Thread 0 has priority " + t0.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:37    : System.out.println("Thread 0 has priority " + t0.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:37    : System.out.println("Thread 0 has priority " + t0.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:37    : System.out.println("Thread 0 has priority " + t0.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:40    : t0.start();
+      [1 insn w/o sources]
+------------------------------------------------------ transition #1 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"START" ,1/2,isCascaded:false}
+      [2 insn w/o sources]
+  harness/Environment.java:41    : for (int i = 1; i < N_THREADS; i++) {
+  harness/Environment.java:42    : int li = i;
+  harness/Environment.java:43    : RTEMSThread t = new TestThread(new int[]{li});
+  harness/TestThread.java:12     : super();
+  rtems/RTEMSThread.java:17      : public RTEMSThread() {
+      [27 insn w/o sources]
+------------------------------------------------------ transition #2 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"LOCK" ,1/2,isCascaded:false}
+      [119 insn w/o sources]
+  rtems/RTEMSThread.java:18      : this.mutexOrderList = /*Collections.synchronizedList(*/new ArrayList<Mutex>()/*)*/;
+      [16 insn w/o sources]
+  rtems/RTEMSThread.java:18      : this.mutexOrderList = /*Collections.synchronizedList(*/new ArrayList<Mutex>()/*)*/;
+------------------------------------------------------ transition #3 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"EXPOSE" ,1/2,isCascaded:false}
+  rtems/RTEMSThread.java:18      : this.mutexOrderList = /*Collections.synchronizedList(*/new ArrayList<Mutex>()/*)*/;
+  rtems/RTEMSThread.java:19      : this.state = this.getState();
+      [9 insn w/o sources]
+  rtems/RTEMSThread.java:19      : this.state = this.getState();
+  rtems/RTEMSThread.java:20      : this.currentPriority = this.realPriority = this.getPriority();
+      [3 insn w/o sources]
+  rtems/RTEMSThread.java:20      : this.currentPriority = this.realPriority = this.getPriority();
+  rtems/RTEMSThread.java:21      : this.trylock = null;
+  rtems/RTEMSThread.java:22      : }
+  harness/TestThread.java:13     : idx = lockIdx;
+  harness/TestThread.java:14     : locks = new Lock[idx.length];
+------------------------------------------------------ transition #4 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"EXPOSE" ,1/2,isCascaded:false}
+  harness/TestThread.java:14     : locks = new Lock[idx.length];
+  harness/TestThread.java:15     : for (int i = 0; i < idx.length; i++) {
+  harness/TestThread.java:16     : locks[i] = Environment.locks[idx[i]];
+  harness/TestThread.java:15     : for (int i = 0; i < idx.length; i++) {
+  harness/TestThread.java:18     : }
+  harness/Environment.java:43    : RTEMSThread t = new TestThread(new int[]{li});
+  harness/Environment.java:44    : t.setPriority(i);
+      [15 insn w/o sources]
+  harness/Environment.java:45    : t.setRealPriority();
+  rtems/RTEMSThread.java:29      : realPriority = getPriority();
+      [3 insn w/o sources]
+  rtems/RTEMSThread.java:29      : realPriority = getPriority();
+  rtems/RTEMSThread.java:30      : }
+  harness/Environment.java:46    : t.setCurrentPriority();
+  rtems/RTEMSThread.java:25      : currentPriority = getPriority();
+      [3 insn w/o sources]
+  rtems/RTEMSThread.java:25      : currentPriority = getPriority();
+  rtems/RTEMSThread.java:26      : }
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+      [2 insn w/o sources]
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+      [2 insn w/o sources]
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+      [2 insn w/o sources]
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+      [2 insn w/o sources]
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+      [2 insn w/o sources]
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+  harness/Environment.java:48    : " has priority " + t.getPriority() +
+      [3 insn w/o sources]
+  harness/Environment.java:48    : " has priority " + t.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:48    : " has priority " + t.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:48    : " has priority " + t.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:48    : " has priority " + t.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:48    : " has priority " + t.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+      [2 insn w/o sources]
+  harness/Environment.java:50    : t.start();
+      [1 insn w/o sources]
+------------------------------------------------------ transition #5 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"START" ,1/3,isCascaded:false}
+      [2 insn w/o sources]
+  harness/Environment.java:41    : for (int i = 1; i < N_THREADS; i++) {
+  harness/Environment.java:42    : int li = i;
+  harness/Environment.java:43    : RTEMSThread t = new TestThread(new int[]{li});
+  harness/TestThread.java:12     : super();
+  rtems/RTEMSThread.java:17      : public RTEMSThread() {
+      [27 insn w/o sources]
+------------------------------------------------------ transition #6 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"LOCK" ,1/3,isCascaded:false}
+      [119 insn w/o sources]
+  rtems/RTEMSThread.java:18      : this.mutexOrderList = /*Collections.synchronizedList(*/new ArrayList<Mutex>()/*)*/;
+      [16 insn w/o sources]
+  rtems/RTEMSThread.java:18      : this.mutexOrderList = /*Collections.synchronizedList(*/new ArrayList<Mutex>()/*)*/;
+------------------------------------------------------ transition #7 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"EXPOSE" ,1/3,isCascaded:false}
+  rtems/RTEMSThread.java:18      : this.mutexOrderList = /*Collections.synchronizedList(*/new ArrayList<Mutex>()/*)*/;
+  rtems/RTEMSThread.java:19      : this.state = this.getState();
+      [9 insn w/o sources]
+  rtems/RTEMSThread.java:19      : this.state = this.getState();
+  rtems/RTEMSThread.java:20      : this.currentPriority = this.realPriority = this.getPriority();
+      [3 insn w/o sources]
+  rtems/RTEMSThread.java:20      : this.currentPriority = this.realPriority = this.getPriority();
+  rtems/RTEMSThread.java:21      : this.trylock = null;
+  rtems/RTEMSThread.java:22      : }
+  harness/TestThread.java:13     : idx = lockIdx;
+  harness/TestThread.java:14     : locks = new Lock[idx.length];
+------------------------------------------------------ transition #8 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"EXPOSE" ,1/3,isCascaded:false}
+  harness/TestThread.java:14     : locks = new Lock[idx.length];
+  harness/TestThread.java:15     : for (int i = 0; i < idx.length; i++) {
+  harness/TestThread.java:16     : locks[i] = Environment.locks[idx[i]];
+  harness/TestThread.java:15     : for (int i = 0; i < idx.length; i++) {
+  harness/TestThread.java:18     : }
+  harness/Environment.java:43    : RTEMSThread t = new TestThread(new int[]{li});
+  harness/Environment.java:44    : t.setPriority(i);
+      [15 insn w/o sources]
+  harness/Environment.java:45    : t.setRealPriority();
+  rtems/RTEMSThread.java:29      : realPriority = getPriority();
+      [3 insn w/o sources]
+  rtems/RTEMSThread.java:29      : realPriority = getPriority();
+  rtems/RTEMSThread.java:30      : }
+  harness/Environment.java:46    : t.setCurrentPriority();
+  rtems/RTEMSThread.java:25      : currentPriority = getPriority();
+      [3 insn w/o sources]
+  rtems/RTEMSThread.java:25      : currentPriority = getPriority();
+  rtems/RTEMSThread.java:26      : }
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+      [2 insn w/o sources]
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+      [2 insn w/o sources]
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+      [2 insn w/o sources]
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+      [2 insn w/o sources]
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+      [2 insn w/o sources]
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+  harness/Environment.java:48    : " has priority " + t.getPriority() +
+      [3 insn w/o sources]
+  harness/Environment.java:48    : " has priority " + t.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:48    : " has priority " + t.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:48    : " has priority " + t.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:48    : " has priority " + t.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:48    : " has priority " + t.getPriority() +
+      [2 insn w/o sources]
+  harness/Environment.java:47    : System.out.println("Thread " + Integer.toString(i + 1) +
+      [2 insn w/o sources]
+  harness/Environment.java:50    : t.start();
+      [1 insn w/o sources]
+------------------------------------------------------ transition #9 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"START" ,2/4,isCascaded:false}
+      [1 insn w/o sources]
+  harness/TestThread.java:1      : package harness;
+  harness/TestThread.java:21     : for (int i = 0; i < idx.length; i++) {
+------------------------------------------------------ transition #10 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  harness/TestThread.java:21     : for (int i = 0; i < idx.length; i++) {
+  harness/TestThread.java:22     : locks[i].lock();
+------------------------------------------------------ transition #11 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  harness/TestThread.java:22     : locks[i].lock();
+------------------------------------------------------ transition #12 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_ARRAY" ,2/4,isCascaded:false}
+  harness/TestThread.java:22     : locks[i].lock();
+  rtems/Mutex.java:35            : synchronized(globalLock) {
+------------------------------------------------------ transition #13 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_CLASS" ,2/4,isCascaded:false}
+  rtems/Mutex.java:35            : synchronized(globalLock) {
+------------------------------------------------------ transition #14 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"LOCK" ,2/4,isCascaded:false}
+  rtems/Mutex.java:35            : synchronized(globalLock) {
+  rtems/Mutex.java:36            : RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+      [2 insn w/o sources]
+  rtems/Mutex.java:36            : RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+  rtems/Mutex.java:37            : while((holder!=null) && (holder!=thisThread))
+------------------------------------------------------ transition #15 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:37            : while((holder!=null) && (holder!=thisThread))
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+------------------------------------------------------ transition #16 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:64            : assert thisThread.getState() != Thread.State.WAITING;
+      [9 insn w/o sources]
+  rtems/Mutex.java:64            : assert thisThread.getState() != Thread.State.WAITING;
+  rtems/Mutex.java:65            : if(holder==null)
+------------------------------------------------------ transition #17 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:65            : if(holder==null)
+  rtems/Mutex.java:67            : holder = thisThread;
+------------------------------------------------------ transition #18 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:67            : holder = thisThread;
+  rtems/Mutex.java:68            : assert nestCount==0;
+------------------------------------------------------ transition #19 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:68            : assert nestCount==0;
+  rtems/Mutex.java:70            : if(nestCount==0)
+------------------------------------------------------ transition #20 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:70            : if(nestCount==0)
+  rtems/Mutex.java:72            : assert !(thisThread.mutexOrderList.contains(this));
+------------------------------------------------------ transition #21 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:72            : assert !(thisThread.mutexOrderList.contains(this));
+      [10 insn w/o sources]
+------------------------------------------------------ transition #22 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [7 insn w/o sources]
+  rtems/Mutex.java:72            : assert !(thisThread.mutexOrderList.contains(this));
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+------------------------------------------------------ transition #23 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:74            : priorityBefore = thisThread.currentPriority;
+------------------------------------------------------ transition #24 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:74            : priorityBefore = thisThread.currentPriority;
+------------------------------------------------------ transition #25 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:74            : priorityBefore = thisThread.currentPriority;
+  rtems/Mutex.java:75            : thisThread.mutexOrderList.add(0, this);
+------------------------------------------------------ transition #26 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:75            : thisThread.mutexOrderList.add(0, this);
+      [6 insn w/o sources]
+------------------------------------------------------ transition #27 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [8 insn w/o sources]
+------------------------------------------------------ transition #28 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [6 insn w/o sources]
+------------------------------------------------------ transition #29 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [2 insn w/o sources]
+------------------------------------------------------ transition #30 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_CLASS" ,2/4,isCascaded:false}
+      [14 insn w/o sources]
+------------------------------------------------------ transition #31 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #32 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #33 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [9 insn w/o sources]
+------------------------------------------------------ transition #34 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [22 insn w/o sources]
+------------------------------------------------------ transition #35 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #36 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"LOCK" ,2/4,isCascaded:false}
+      [44 insn w/o sources]
+------------------------------------------------------ transition #37 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [1 insn w/o sources]
+------------------------------------------------------ transition #38 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"EXPOSE" ,2/4,isCascaded:false}
+      [6 insn w/o sources]
+------------------------------------------------------ transition #39 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #40 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [6 insn w/o sources]
+------------------------------------------------------ transition #41 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [8 insn w/o sources]
+------------------------------------------------------ transition #42 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [7 insn w/o sources]
+------------------------------------------------------ transition #43 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #44 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [2 insn w/o sources]
+  rtems/Mutex.java:76            : assert thisThread.mutexOrderList.contains(this);
+------------------------------------------------------ transition #45 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:76            : assert thisThread.mutexOrderList.contains(this);
+      [10 insn w/o sources]
+------------------------------------------------------ transition #46 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [5 insn w/o sources]
+------------------------------------------------------ transition #47 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [17 insn w/o sources]
+  rtems/Mutex.java:76            : assert thisThread.mutexOrderList.contains(this);
+  rtems/Mutex.java:78            : nestCount++;
+------------------------------------------------------ transition #48 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:78            : nestCount++;
+------------------------------------------------------ transition #49 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:78            : nestCount++;
+  rtems/Mutex.java:79            : thisThread.resourceCount++;
+------------------------------------------------------ transition #50 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:79            : thisThread.resourceCount++;
+------------------------------------------------------ transition #51 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:79            : thisThread.resourceCount++;
+  rtems/Mutex.java:80            : }
+  rtems/Mutex.java:81            : }
+  harness/TestThread.java:21     : for (int i = 0; i < idx.length; i++) {
+------------------------------------------------------ transition #52 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  harness/TestThread.java:21     : for (int i = 0; i < idx.length; i++) {
+  harness/TestThread.java:22     : locks[i].lock();
+------------------------------------------------------ transition #53 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  harness/TestThread.java:22     : locks[i].lock();
+------------------------------------------------------ transition #54 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_ARRAY" ,2/4,isCascaded:false}
+  harness/TestThread.java:22     : locks[i].lock();
+  rtems/Mutex.java:35            : synchronized(globalLock) {
+------------------------------------------------------ transition #55 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_CLASS" ,2/4,isCascaded:false}
+  rtems/Mutex.java:35            : synchronized(globalLock) {
+------------------------------------------------------ transition #56 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"LOCK" ,2/4,isCascaded:false}
+  rtems/Mutex.java:35            : synchronized(globalLock) {
+  rtems/Mutex.java:36            : RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+      [2 insn w/o sources]
+  rtems/Mutex.java:36            : RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+  rtems/Mutex.java:37            : while((holder!=null) && (holder!=thisThread))
+------------------------------------------------------ transition #57 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:37            : while((holder!=null) && (holder!=thisThread))
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+------------------------------------------------------ transition #58 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:63            : System.out.println("thread-id:"+ thisThread.getId() + " acquiring mutex "+ id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:64            : assert thisThread.getState() != Thread.State.WAITING;
+      [9 insn w/o sources]
+  rtems/Mutex.java:64            : assert thisThread.getState() != Thread.State.WAITING;
+  rtems/Mutex.java:65            : if(holder==null)
+------------------------------------------------------ transition #59 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:65            : if(holder==null)
+  rtems/Mutex.java:67            : holder = thisThread;
+------------------------------------------------------ transition #60 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:67            : holder = thisThread;
+  rtems/Mutex.java:68            : assert nestCount==0;
+------------------------------------------------------ transition #61 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:68            : assert nestCount==0;
+  rtems/Mutex.java:70            : if(nestCount==0)
+------------------------------------------------------ transition #62 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:70            : if(nestCount==0)
+  rtems/Mutex.java:72            : assert !(thisThread.mutexOrderList.contains(this));
+------------------------------------------------------ transition #63 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:72            : assert !(thisThread.mutexOrderList.contains(this));
+      [10 insn w/o sources]
+------------------------------------------------------ transition #64 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [5 insn w/o sources]
+------------------------------------------------------ transition #65 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [15 insn w/o sources]
+------------------------------------------------------ transition #66 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [7 insn w/o sources]
+  rtems/Mutex.java:72            : assert !(thisThread.mutexOrderList.contains(this));
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+------------------------------------------------------ transition #67 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:73            : System.out.println("thread: "+thisThread.getId() + "adding mutex: "+ id + " to its mutexOrderList");
+      [2 insn w/o sources]
+  rtems/Mutex.java:74            : priorityBefore = thisThread.currentPriority;
+------------------------------------------------------ transition #68 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:74            : priorityBefore = thisThread.currentPriority;
+------------------------------------------------------ transition #69 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:74            : priorityBefore = thisThread.currentPriority;
+  rtems/Mutex.java:75            : thisThread.mutexOrderList.add(0, this);
+------------------------------------------------------ transition #70 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:75            : thisThread.mutexOrderList.add(0, this);
+      [6 insn w/o sources]
+------------------------------------------------------ transition #71 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [8 insn w/o sources]
+------------------------------------------------------ transition #72 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [6 insn w/o sources]
+------------------------------------------------------ transition #73 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [2 insn w/o sources]
+------------------------------------------------------ transition #74 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_CLASS" ,2/4,isCascaded:false}
+      [8 insn w/o sources]
+------------------------------------------------------ transition #75 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #76 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #77 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [8 insn w/o sources]
+------------------------------------------------------ transition #78 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #79 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [6 insn w/o sources]
+------------------------------------------------------ transition #80 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [8 insn w/o sources]
+------------------------------------------------------ transition #81 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [7 insn w/o sources]
+------------------------------------------------------ transition #82 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #83 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [2 insn w/o sources]
+  rtems/Mutex.java:76            : assert thisThread.mutexOrderList.contains(this);
+------------------------------------------------------ transition #84 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:76            : assert thisThread.mutexOrderList.contains(this);
+      [10 insn w/o sources]
+------------------------------------------------------ transition #85 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [5 insn w/o sources]
+------------------------------------------------------ transition #86 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+      [17 insn w/o sources]
+  rtems/Mutex.java:76            : assert thisThread.mutexOrderList.contains(this);
+  rtems/Mutex.java:78            : nestCount++;
+------------------------------------------------------ transition #87 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:78            : nestCount++;
+------------------------------------------------------ transition #88 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:78            : nestCount++;
+  rtems/Mutex.java:79            : thisThread.resourceCount++;
+------------------------------------------------------ transition #89 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:79            : thisThread.resourceCount++;
+------------------------------------------------------ transition #90 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  rtems/Mutex.java:79            : thisThread.resourceCount++;
+  rtems/Mutex.java:80            : }
+  rtems/Mutex.java:81            : }
+  harness/TestThread.java:21     : for (int i = 0; i < idx.length; i++) {
+------------------------------------------------------ transition #91 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  harness/TestThread.java:21     : for (int i = 0; i < idx.length; i++) {
+  harness/TestThread.java:24     : for (int i = idx.length-1; i>= 0; i--) {
+------------------------------------------------------ transition #92 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  harness/TestThread.java:24     : for (int i = idx.length-1; i>= 0; i--) {
+  harness/TestThread.java:25     : locks[i].unlock();
+------------------------------------------------------ transition #93 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/4,isCascaded:false}
+  harness/TestThread.java:25     : locks[i].unlock();
+------------------------------------------------------ transition #94 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_ARRAY" ,2/4,isCascaded:false}
+  harness/TestThread.java:25     : locks[i].unlock();
+  rtems/Mutex.java:84            : synchronized(globalLock) {
+------------------------------------------------------ transition #95 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_CLASS" ,2/4,isCascaded:false}
+  rtems/Mutex.java:84            : synchronized(globalLock) {
+------------------------------------------------------ transition #96 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"LOCK" ,3/4,isCascaded:false}
+      [1 insn w/o sources]
+  harness/TestThread.java:1      : package harness;
+  harness/TestThread.java:21     : for (int i = 0; i < idx.length; i++) {
+------------------------------------------------------ transition #97 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,3/4,isCascaded:false}
+  harness/TestThread.java:21     : for (int i = 0; i < idx.length; i++) {
+  harness/TestThread.java:22     : locks[i].lock();
+------------------------------------------------------ transition #98 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,3/4,isCascaded:false}
+  harness/TestThread.java:22     : locks[i].lock();
+------------------------------------------------------ transition #99 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_ARRAY" ,3/4,isCascaded:false}
+  harness/TestThread.java:22     : locks[i].lock();
+  rtems/Mutex.java:35            : synchronized(globalLock) {
+------------------------------------------------------ transition #100 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_CLASS" ,3/4,isCascaded:false}
+  rtems/Mutex.java:35            : synchronized(globalLock) {
+------------------------------------------------------ transition #101 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"LOCK" ,3/4,isCascaded:false}
+  rtems/Mutex.java:35            : synchronized(globalLock) {
+  rtems/Mutex.java:36            : RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+      [2 insn w/o sources]
+  rtems/Mutex.java:36            : RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+  rtems/Mutex.java:37            : while((holder!=null) && (holder!=thisThread))
+------------------------------------------------------ transition #102 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:37            : while((holder!=null) && (holder!=thisThread))
+------------------------------------------------------ transition #103 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:37            : while((holder!=null) && (holder!=thisThread))
+  rtems/Mutex.java:39            : assert (thisThread.currentPriority == thisThread.getPriority());
+------------------------------------------------------ transition #104 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:39            : assert (thisThread.currentPriority == thisThread.getPriority());
+      [3 insn w/o sources]
+  rtems/Mutex.java:39            : assert (thisThread.currentPriority == thisThread.getPriority());
+  rtems/Mutex.java:41            : thisThread.state = Thread.State.WAITING;
+------------------------------------------------------ transition #105 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:41            : thisThread.state = Thread.State.WAITING;
+  rtems/Mutex.java:42            : if(priorityRaiseFilter(thisThread.currentPriority))
+------------------------------------------------------ transition #106 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:42            : if(priorityRaiseFilter(thisThread.currentPriority))
+  rtems/Mutex.java:146           : int holderPriority = holder.getPriority();
+------------------------------------------------------ transition #107 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:146           : int holderPriority = holder.getPriority();
+      [3 insn w/o sources]
+  rtems/Mutex.java:146           : int holderPriority = holder.getPriority();
+  rtems/Mutex.java:147           : return (priority < holderPriority);
+  rtems/Mutex.java:42            : if(priorityRaiseFilter(thisThread.currentPriority))
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+------------------------------------------------------ transition #108 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+------------------------------------------------------ transition #109 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+------------------------------------------------------ transition #110 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+------------------------------------------------------ transition #111 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:44            : System.out.println("raising priority of thread: "+ holder.getId() + "by thread : " + thisThread.getId()+" frm :"+holder.currentPriority + " to: "+ thisThread.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:45            : updatePriority(thisThread.currentPriority);
+------------------------------------------------------ transition #112 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:45            : updatePriority(thisThread.currentPriority);
+  rtems/Mutex.java:154           : if(USE_MODEL==REC_UPDATE)
+------------------------------------------------------ transition #113 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_CLASS" ,2/3,isCascaded:false}
+  rtems/Mutex.java:154           : if(USE_MODEL==REC_UPDATE)
+  rtems/Mutex.java:160           : updateNonRecPriority(priority);
+  rtems/Mutex.java:177           : holder.currentPriority = priority;
+------------------------------------------------------ transition #114 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:177           : holder.currentPriority = priority;
+------------------------------------------------------ transition #115 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:177           : holder.currentPriority = priority;
+  rtems/Mutex.java:178           : holder.setPriority(priority);
+------------------------------------------------------ transition #116 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:178           : holder.setPriority(priority);
+      [13 insn w/o sources]
+------------------------------------------------------ transition #117 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"PRIORITY" ,2/3,isCascaded:false}
+      [3 insn w/o sources]
+  rtems/Mutex.java:180           : }
+  rtems/Mutex.java:162           : if(holder.wait!=null){
+------------------------------------------------------ transition #118 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:162           : if(holder.wait!=null){
+------------------------------------------------------ transition #119 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:162           : if(holder.wait!=null){
+  rtems/Mutex.java:173           : }
+  rtems/Mutex.java:46            : System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:46            : System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:46            : System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
+------------------------------------------------------ transition #120 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:46            : System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:46            : System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:46            : System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:46            : System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
+------------------------------------------------------ transition #121 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:46            : System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
+------------------------------------------------------ transition #122 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:46            : System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:46            : System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:46            : System.out.println("updated pr for tid: "+holder.getId() +" current pr: "+holder.currentPriority);
+      [2 insn w/o sources]
+  rtems/Mutex.java:49            : if(waitQueue.contains(thisThread)==false){
+------------------------------------------------------ transition #123 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:49            : if(waitQueue.contains(thisThread)==false){
+      [10 insn w/o sources]
+------------------------------------------------------ transition #124 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [8 insn w/o sources]
+  rtems/Mutex.java:49            : if(waitQueue.contains(thisThread)==false){
+  rtems/Mutex.java:50            : System.out.println("Adding thread :" + thisThread.getId() + " in waitQ of mutex: "+id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:50            : System.out.println("Adding thread :" + thisThread.getId() + " in waitQ of mutex: "+id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:50            : System.out.println("Adding thread :" + thisThread.getId() + " in waitQ of mutex: "+id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:50            : System.out.println("Adding thread :" + thisThread.getId() + " in waitQ of mutex: "+id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:50            : System.out.println("Adding thread :" + thisThread.getId() + " in waitQ of mutex: "+id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:50            : System.out.println("Adding thread :" + thisThread.getId() + " in waitQ of mutex: "+id);
+------------------------------------------------------ transition #125 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:50            : System.out.println("Adding thread :" + thisThread.getId() + " in waitQ of mutex: "+id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:50            : System.out.println("Adding thread :" + thisThread.getId() + " in waitQ of mutex: "+id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:50            : System.out.println("Adding thread :" + thisThread.getId() + " in waitQ of mutex: "+id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:51            : waitQueue.offer(thisThread);
+------------------------------------------------------ transition #126 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:51            : waitQueue.offer(thisThread);
+      [5 insn w/o sources]
+------------------------------------------------------ transition #127 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #128 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [3 insn w/o sources]
+------------------------------------------------------ transition #129 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [5 insn w/o sources]
+------------------------------------------------------ transition #130 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [8 insn w/o sources]
+------------------------------------------------------ transition #131 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [5 insn w/o sources]
+------------------------------------------------------ transition #132 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #133 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_ARRAY" ,2/3,isCascaded:false}
+      [4 insn w/o sources]
+  rtems/Mutex.java:51            : waitQueue.offer(thisThread);
+  rtems/Mutex.java:53            : thisThread.wait = waitQueue;
+------------------------------------------------------ transition #134 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:53            : thisThread.wait = waitQueue;
+------------------------------------------------------ transition #135 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:53            : thisThread.wait = waitQueue;
+  rtems/Mutex.java:54            : thisThread.trylock = this;
+------------------------------------------------------ transition #136 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:54            : thisThread.trylock = this;
+  rtems/Mutex.java:55            : validator();
+  rtems/Mutex.java:129           : RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+      [2 insn w/o sources]
+  rtems/Mutex.java:129           : RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+  rtems/Mutex.java:130           : Iterator<Mutex> mItr = thisThread.mutexOrderList.iterator();
+------------------------------------------------------ transition #137 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:130           : Iterator<Mutex> mItr = thisThread.mutexOrderList.iterator();
+      [25 insn w/o sources]
+  rtems/Mutex.java:130           : Iterator<Mutex> mItr = thisThread.mutexOrderList.iterator();
+  rtems/Mutex.java:131           : while (mItr.hasNext()){
+      [7 insn w/o sources]
+------------------------------------------------------ transition #138 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [5 insn w/o sources]
+  rtems/Mutex.java:131           : while (mItr.hasNext()){
+  rtems/Mutex.java:143           : }
+  rtems/Mutex.java:56            : globalLock.wait();
+------------------------------------------------------ transition #139 thread: 2
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_CLASS" ,2/3,isCascaded:false}
+  rtems/Mutex.java:56            : globalLock.wait();
+      [1 insn w/o sources]
+------------------------------------------------------ transition #140 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"WAIT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:84            : synchronized(globalLock) {
+  rtems/Mutex.java:85            : Mutex topMutex=null;
+  rtems/Mutex.java:86            : RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+      [2 insn w/o sources]
+  rtems/Mutex.java:86            : RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+  rtems/Mutex.java:89            : assert nestCount>0;
+------------------------------------------------------ transition #141 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:89            : assert nestCount>0;
+  rtems/Mutex.java:90            : assert thisThread.resourceCount>0;
+------------------------------------------------------ transition #142 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:90            : assert thisThread.resourceCount>0;
+  rtems/Mutex.java:91            : nestCount--;
+------------------------------------------------------ transition #143 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:91            : nestCount--;
+------------------------------------------------------ transition #144 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:91            : nestCount--;
+  rtems/Mutex.java:92            : thisThread.resourceCount--;
+------------------------------------------------------ transition #145 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:92            : thisThread.resourceCount--;
+------------------------------------------------------ transition #146 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:92            : thisThread.resourceCount--;
+  rtems/Mutex.java:93            : if(nestCount==0)
+------------------------------------------------------ transition #147 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:93            : if(nestCount==0)
+  rtems/Mutex.java:95            : topMutex = thisThread.mutexOrderList.get(0);
+------------------------------------------------------ transition #148 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:95            : topMutex = thisThread.mutexOrderList.get(0);
+      [6 insn w/o sources]
+------------------------------------------------------ transition #149 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [8 insn w/o sources]
+------------------------------------------------------ transition #150 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [5 insn w/o sources]
+  rtems/Mutex.java:95            : topMutex = thisThread.mutexOrderList.get(0);
+  rtems/Mutex.java:96            : assert this==topMutex;
+  rtems/Mutex.java:97            : topMutex = thisThread.mutexOrderList.remove(0);
+------------------------------------------------------ transition #151 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:97            : topMutex = thisThread.mutexOrderList.remove(0);
+      [6 insn w/o sources]
+------------------------------------------------------ transition #152 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [6 insn w/o sources]
+------------------------------------------------------ transition #153 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #154 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [6 insn w/o sources]
+------------------------------------------------------ transition #155 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [7 insn w/o sources]
+------------------------------------------------------ transition #156 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [10 insn w/o sources]
+------------------------------------------------------ transition #157 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [6 insn w/o sources]
+------------------------------------------------------ transition #158 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [8 insn w/o sources]
+------------------------------------------------------ transition #159 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #160 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [5 insn w/o sources]
+------------------------------------------------------ transition #161 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [5 insn w/o sources]
+  rtems/Mutex.java:97            : topMutex = thisThread.mutexOrderList.remove(0);
+  rtems/Mutex.java:100           : System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:100           : System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:100           : System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:100           : System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:100           : System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:100           : System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + id);
+      [3 insn w/o sources]
+  rtems/Mutex.java:100           : System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:100           : System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:100           : System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + id);
+------------------------------------------------------ transition #162 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:100           : System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:100           : System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:100           : System.out.println("Holder Thread: "+thisThread.getId()+"before resetting priority_before : "+ thisThread.getPriority()+" while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:101           : thisThread.setPriority(priorityBefore);
+------------------------------------------------------ transition #163 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:101           : thisThread.setPriority(priorityBefore);
+      [13 insn w/o sources]
+------------------------------------------------------ transition #164 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"PRIORITY" ,2/3,isCascaded:false}
+      [3 insn w/o sources]
+  rtems/Mutex.java:102           : thisThread.currentPriority = priorityBefore;
+------------------------------------------------------ transition #165 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:102           : thisThread.currentPriority = priorityBefore;
+------------------------------------------------------ transition #166 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:102           : thisThread.currentPriority = priorityBefore;
+  rtems/Mutex.java:103           : System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:103           : System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:103           : System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:103           : System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:103           : System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:103           : System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + id);
+      [3 insn w/o sources]
+  rtems/Mutex.java:103           : System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:103           : System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:103           : System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + id);
+------------------------------------------------------ transition #167 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:103           : System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:103           : System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:103           : System.out.println("Holder Thread: "+thisThread.getId()+ " after stepdown ops-->current priority: " + thisThread.getPriority() + " while releasing mutex: " + id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:104           : validator();
+  rtems/Mutex.java:129           : RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+      [2 insn w/o sources]
+  rtems/Mutex.java:129           : RTEMSThread thisThread = (RTEMSThread)Thread.currentThread();
+  rtems/Mutex.java:130           : Iterator<Mutex> mItr = thisThread.mutexOrderList.iterator();
+------------------------------------------------------ transition #168 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:130           : Iterator<Mutex> mItr = thisThread.mutexOrderList.iterator();
+      [25 insn w/o sources]
+  rtems/Mutex.java:130           : Iterator<Mutex> mItr = thisThread.mutexOrderList.iterator();
+  rtems/Mutex.java:131           : while (mItr.hasNext()){
+      [7 insn w/o sources]
+------------------------------------------------------ transition #169 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [6 insn w/o sources]
+  rtems/Mutex.java:131           : while (mItr.hasNext()){
+  rtems/Mutex.java:132           : chkMtx = mItr.next();
+      [5 insn w/o sources]
+------------------------------------------------------ transition #170 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [14 insn w/o sources]
+------------------------------------------------------ transition #171 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [6 insn w/o sources]
+------------------------------------------------------ transition #172 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [18 insn w/o sources]
+  rtems/Mutex.java:132           : chkMtx = mItr.next();
+  rtems/Mutex.java:133           : System.out.println("--->Mutex: "+chkMtx.id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:133           : System.out.println("--->Mutex: "+chkMtx.id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:133           : System.out.println("--->Mutex: "+chkMtx.id);
+------------------------------------------------------ transition #173 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:133           : System.out.println("--->Mutex: "+chkMtx.id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:133           : System.out.println("--->Mutex: "+chkMtx.id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:133           : System.out.println("--->Mutex: "+chkMtx.id);
+      [2 insn w/o sources]
+  rtems/Mutex.java:134           : chkThr = chkMtx.waitQueue.peek();
+------------------------------------------------------ transition #174 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+  rtems/Mutex.java:134           : chkThr = chkMtx.waitQueue.peek();
+      [2 insn w/o sources]
+------------------------------------------------------ transition #175 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [4 insn w/o sources]
+------------------------------------------------------ transition #176 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_OBJECT" ,2/3,isCascaded:false}
+      [3 insn w/o sources]
+------------------------------------------------------ transition #177 thread: 1
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"SHARED_ARRAY" ,2/3,isCascaded:false}
+      [2 insn w/o sources]
+  rtems/Mutex.java:134           : chkThr = chkMtx.waitQueue.peek();
+  rtems/Mutex.java:135           : if(chkThr!=null)
+  rtems/Mutex.java:137           : System.out.println("------>Thread-id: "+ chkThr.getId()+" priority: "+ chkThr.getPriority());
+      [2 insn w/o sources]
+  rtems/Mutex.java:137           : System.out.println("------>Thread-id: "+ chkThr.getId()+" priority: "+ chkThr.getPriority());
+      [2 insn w/o sources]
+  rtems/Mutex.java:137           : System.out.println("------>Thread-id: "+ chkThr.getId()+" priority: "+ chkThr.getPriority());
+      [2 insn w/o sources]
+  rtems/Mutex.java:137           : System.out.println("------>Thread-id: "+ chkThr.getId()+" priority: "+ chkThr.getPriority());
+      [2 insn w/o sources]
+  rtems/Mutex.java:137           : System.out.println("------>Thread-id: "+ chkThr.getId()+" priority: "+ chkThr.getPriority());
+      [2 insn w/o sources]
+  rtems/Mutex.java:137           : System.out.println("------>Thread-id: "+ chkThr.getId()+" priority: "+ chkThr.getPriority());
+      [3 insn w/o sources]
+  rtems/Mutex.java:137           : System.out.println("------>Thread-id: "+ chkThr.getId()+" priority: "+ chkThr.getPriority());
+      [2 insn w/o sources]
+  rtems/Mutex.java:137           : System.out.println("------>Thread-id: "+ chkThr.getId()+" priority: "+ chkThr.getPriority());
+      [2 insn w/o sources]
+  rtems/Mutex.java:137           : System.out.println("------>Thread-id: "+ chkThr.getId()+" priority: "+ chkThr.getPriority());
+      [2 insn w/o sources]
+  rtems/Mutex.java:138           : assert (thisThread.getPriority()<=chkThr.getPriority());
+      [3 insn w/o sources]
+  rtems/Mutex.java:138           : assert (thisThread.getPriority()<=chkThr.getPriority());
+      [3 insn w/o sources]
+  rtems/Mutex.java:138           : assert (thisThread.getPriority()<=chkThr.getPriority());
+      [21 insn w/o sources]
+  rtems/Mutex.java:138           : assert (thisThread.getPriority()<=chkThr.getPriority());
+  rtems/Mutex.java:118           : }
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at java.lang.Thread.start(Thread.java)
+	at harness.Environment.main(Environment.java:50)
+
+thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:3,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at rtems.Mutex.unlock(Mutex.java:118)
+	at harness.TestThread.run(TestThread.java:25)
+
+thread harness.TestThread:{id:2,name:Thread-2,status:WAITING,priority:1,isDaemon:false,lockCount:1,suspendCount:0}
+  waiting on: java.lang.Object@165
+  call stack:
+	at java.lang.Object.wait(Object.java)
+	at rtems.Mutex.lock(Mutex.java:56)
+	at harness.TestThread.run(TestThread.java:22)
+
+thread harness.TestThread:{id:3,name:Thread-3,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at rtems.Mutex.validator..."
+
+====================================================== statistics
+elapsed time:       00:00:17
+states:             new=32565,visited=82900,backtracked=115287,end=32371
+search:             maxDepth=411,constraints=0
+choice generators:  thread=32380 (signal=27,lock=2930,sharedRef=25392,threadApi=23,reschedule=4008), data=0
+heap:               new=15464,released=135372,maxLive=504,gcCycles=112028
+instructions:       900495
+max memory:         287MB
+loaded code:        classes=80,methods=1815
+
+====================================================== search finished: 7/2/15 3:52 PM
+]0;saurabh@saurabh-Inspiron-N5010: ~/model_checking/new2-lockmodel/lock-modelsaurabh@saurabh-Inspiron-N5010:~/model_checking/new2-lockmodel/lock-model$ exit
+exit
+
+Script done on Thu 02 Jul 2015 03:52:31 PM PDT
