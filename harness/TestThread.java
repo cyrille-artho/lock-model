@@ -9,7 +9,9 @@ public class TestThread extends RTEMSThread {
   Lock locks[];
 
   public TestThread(int lockIdx[]) {
+    super();
     idx = lockIdx;
+    locks = new Lock[idx.length];
     for (int i = 0; i < idx.length; i++) {
       locks[i] = Environment.locks[idx[i]];
     }
@@ -19,8 +21,9 @@ public class TestThread extends RTEMSThread {
     for (int i = 0; i < idx.length; i++) {
       locks[i].lock();
     }
-    for (int i = 0; i < idx.length; i++) {
+    for (int i = idx.length-1; i>= 0; i--) {
       locks[i].unlock();
     }
+    assert currentPriority==realPriority;
   }
 }

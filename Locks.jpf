@@ -1,5 +1,6 @@
-target=Environment
+target=harness.Environment
 classpath=.
 native_classpath=.
 sourcepath=.
 report.console.property_violation=result,error,trace,snapshot
+listener=gov.nasa.jpf.listener.PreciseRaceDetector
